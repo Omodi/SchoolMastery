@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form1
+    partial class FormQuestionHelp
     {
         /// <summary>
         /// Required designer variable.
@@ -36,9 +36,9 @@
             this.Answer = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,13 +47,14 @@
             this.Question.AcceptsReturn = true;
             this.Question.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Question.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Question.Location = new System.Drawing.Point(12, 12);
+            this.Question.Location = new System.Drawing.Point(12, 164);
             this.Question.Multiline = true;
             this.Question.Name = "Question";
             this.Question.ReadOnly = true;
-            this.Question.Size = new System.Drawing.Size(925, 417);
+            this.Question.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Question.Size = new System.Drawing.Size(925, 167);
             this.Question.TabIndex = 0;
-            this.Question.Text = "Q: Insert nice question here... ?";
+            this.Question.Text = "Q: Insert sample question here... ?";
             // 
             // radioButton1
             // 
@@ -76,9 +77,9 @@
             this.panel1.Controls.Add(this.Answer);
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Location = new System.Drawing.Point(12, 435);
+            this.panel1.Location = new System.Drawing.Point(12, 487);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(925, 156);
+            this.panel1.Size = new System.Drawing.Size(925, 124);
             this.panel1.TabIndex = 2;
             // 
             // textBox1
@@ -139,35 +140,43 @@
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(405, 617);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 51);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Help";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(787, 617);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(150, 51);
             this.button3.TabIndex = 5;
-            this.button3.Text = "Exit";
+            this.button3.Text = "Return to problem";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(405, 591);
+            this.textBox2.AcceptsReturn = true;
+            this.textBox2.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(12, 23);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 20);
+            this.textBox2.ReadOnly = true;
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox2.Size = new System.Drawing.Size(925, 135);
             this.textBox2.TabIndex = 6;
-            this.textBox2.Text = "     Saving Progress!";
+            this.textBox2.Text = "Tips: Have some good problem solving solution ideas to put in here...";
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // textBox3
+            // 
+            this.textBox3.AcceptsReturn = true;
+            this.textBox3.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(12, 337);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox3.Size = new System.Drawing.Size(925, 144);
+            this.textBox3.TabIndex = 7;
+            this.textBox3.Text = "Steps: Insert some steps to take in solving the problem to put in here...";
             // 
             // Form1
             // 
@@ -176,14 +185,14 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(964, 680);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.Question);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Question);
             this.Name = "Form1";
-            this.Text = "Question";
+            this.Text = "Help";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -201,9 +210,9 @@
         private System.Windows.Forms.RadioButton Answer;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 

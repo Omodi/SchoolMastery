@@ -10,3 +10,8 @@ C:\Users\Steven\Downloads\BowlingAlley\code\SchoolMastery\SchoolMastery\obj\Debu
 C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\bin\Debug\SchoolMastery.exe.config
 C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\obj\Debug\SchoolMastery.exe
 C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\obj\Debug\SchoolMastery.pdb
+C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\obj\Debug\SchoolMastery.csprojResolveAssemblyReference.cache
+C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\obj\Debug\SchoolMastery.Properties.Resources.resources
+C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\obj\Debug\SchoolMastery.csproj.GenerateResource.Cache
+C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\bin\Debug\SchoolMastery.exe
+C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\bin\Debug\SchoolMastery.pdb

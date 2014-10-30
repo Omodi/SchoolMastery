@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form1
+    partial class FormQuestion
     {
         /// <summary>
         /// Required designer variable.
@@ -169,7 +169,7 @@
             this.textBox2.TabIndex = 6;
             this.textBox2.Text = "     Saving Progress!";
             // 
-            // Form1
+            // FormQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -182,7 +182,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Question);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Name = "FormQuestion";
             this.Text = "Question";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
