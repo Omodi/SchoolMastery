@@ -15,3 +15,9 @@ C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\obj\Debug\SchoolMastery.Pr
 C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\obj\Debug\SchoolMastery.csproj.GenerateResource.Cache
 C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\bin\Debug\SchoolMastery.exe
 C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\bin\Debug\SchoolMastery.pdb
+C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\obj\Debug\WindowsFormsApplication1.FormCreateProfile.resources
+C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\obj\Debug\WindowsFormsApplication1.FormMainMenu.resources
+C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\obj\Debug\WindowsFormsApplication1.FormNewTest.resources
+C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\obj\Debug\WindowsFormsApplication1.FormSelectProfile.resources
+C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\obj\Debug\WindowsFormsApplication1.FormStatistics.resources
+C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\obj\Debug\WindowsFormsApplication1.FormTestFinished.resources
