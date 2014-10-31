@@ -10,7 +10,7 @@ namespace SchoolMastery.Model
     {
         private string tip;
         private string step;
-        public HelpQuestion(string q, string[] a, string correct, string t, string s) : base(null, q, a, correct)
+        public HelpQuestion(string q, List<string> a, string correct, string t, string s) : base(null, q, a, correct)
         {
             this.tip = t;
             this.step = s;

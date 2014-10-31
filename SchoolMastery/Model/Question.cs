@@ -11,25 +11,19 @@ namespace SchoolMastery.Model
         private Question helpQuestion;
         private string question;
         private string correctAnswer;
-        private string[] answers;
-        public Question(Question help, string q, string[] a, string correct)
+        private List<string> answers;
+        public Question(Question help, string q, List<string> a, string correct)
         {
-            if( a.Length != 4){
-                this.helpQuestion = help;
-                this.answers = a;
-                this.question = q;
-                this.correctAnswer = correct;
-            }
-            else
-            {
-                //throw new IndexOutOfRangeException();
-            }
+            this.helpQuestion = help;
+            this.answers = a;
+            this.question = q;
+            this.correctAnswer = correct;
         }
         public Question getHelpQuestion()
         {
             return helpQuestion;
         }
-        public string[] getAnswers()
+        public List<string> getAnswers()
         {
             return answers;
         }
