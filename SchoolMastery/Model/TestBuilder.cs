@@ -10,8 +10,9 @@ namespace SchoolMastery.Model
 {
     class TestBuilder
     {
-        string folderName = "Tests";
-        public List<string> getFileNames()
+        private static string folderName = "C:\\Users\\Steven\\Downloads\\SchoolMastery\\SchoolMastery\\Tests";
+        private static List<Test> tests = new List<Test>();
+        public static List<string> getFileNames()
         {
             List<string> fileNames = new List<string>();
             if (Directory.Exists(folderName))
@@ -28,7 +29,7 @@ namespace SchoolMastery.Model
                 throw new IOException();
             }
         }
-        public Test creatTest(string fileName)
+        public static Test createTest(string fileName)
         {
             try
             {
@@ -69,6 +70,16 @@ namespace SchoolMastery.Model
             }
             Console.WriteLine("File read was null");
             return null;
+        }
+        public static List<Test> createTests()
+        {
+            List<string> fileNames = getFileNames();
+            List<Test> tests = new List<Test>();
+            foreach(string fileName in fileNames){
+                tests.Add(createTest(fileName));
+            }
+            return tests;
+
         }
     }
 }
