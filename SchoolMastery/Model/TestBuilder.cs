@@ -8,7 +8,7 @@ using System.Collections;
 
 namespace SchoolMastery.Model
 {
-    class TestBuilder
+    public class TestBuilder
     {
         private static string folderName = "C:\\Users\\Steven\\Downloads\\SchoolMastery\\SchoolMastery\\Tests";
         private static List<Test> tests = new List<Test>();

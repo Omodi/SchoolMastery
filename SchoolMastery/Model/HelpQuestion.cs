@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace SchoolMastery.Model
 {
-    class HelpQuestion : Question
+    [Serializable]
+    public class HelpQuestion : Question
     {
         private string tip;
         private string step;
+        public HelpQuestion() { }
         public HelpQuestion(string q, List<string> a, string correct, string t, string s) : base(null, q, a, correct)
         {
             this.tip = t;

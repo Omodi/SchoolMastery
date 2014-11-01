@@ -31,13 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSelectProfile));
             this.selectButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.puppyPic = new System.Windows.Forms.PictureBox();
             this.plusPic = new System.Windows.Forms.PictureBox();
             this.sameTextBox = new System.Windows.Forms.TextBox();
             this.grade3TextBox = new System.Windows.Forms.TextBox();
             this.createNewProfileTextBox = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.puppyPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plusPic)).BeginInit();
             this.SuspendLayout();
@@ -59,14 +57,7 @@
             this.exitButton.TabIndex = 5;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(-23, -46);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // puppyPic
             // 
@@ -76,7 +67,6 @@
             this.puppyPic.Size = new System.Drawing.Size(200, 200);
             this.puppyPic.TabIndex = 7;
             this.puppyPic.TabStop = false;
-            this.puppyPic.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // plusPic
             // 
@@ -86,6 +76,7 @@
             this.plusPic.Size = new System.Drawing.Size(200, 200);
             this.plusPic.TabIndex = 8;
             this.plusPic.TabStop = false;
+            this.plusPic.Click += new System.EventHandler(this.plusPic_Click);
             // 
             // sameTextBox
             // 
@@ -95,7 +86,6 @@
             this.sameTextBox.TabIndex = 9;
             this.sameTextBox.Text = "Sam";
             this.sameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.sameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // grade3TextBox
             // 
@@ -105,7 +95,6 @@
             this.grade3TextBox.TabIndex = 10;
             this.grade3TextBox.Text = "Grade 3";
             this.grade3TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.grade3TextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // createNewProfileTextBox
             // 
@@ -115,6 +104,7 @@
             this.createNewProfileTextBox.TabIndex = 11;
             this.createNewProfileTextBox.Text = "Create New Profile";
             this.createNewProfileTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.createNewProfileTextBox.TextChanged += new System.EventHandler(this.createNewProfileTextBox_TextChanged);
             // 
             // FormSelectProfile
             // 
@@ -128,12 +118,10 @@
             this.Controls.Add(this.sameTextBox);
             this.Controls.Add(this.plusPic);
             this.Controls.Add(this.puppyPic);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.selectButton);
             this.Name = "FormSelectProfile";
             this.Text = "Select Profile";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.puppyPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plusPic)).EndInit();
             this.ResumeLayout(false);
@@ -145,7 +133,6 @@
 
         private System.Windows.Forms.Button selectButton;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox puppyPic;
         private System.Windows.Forms.PictureBox plusPic;
         private System.Windows.Forms.TextBox sameTextBox;

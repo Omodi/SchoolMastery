@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SchoolMastery.Model;
+using WindowsFormsApplication1;
 
 namespace SchoolMastery
 {
@@ -17,7 +18,7 @@ namespace SchoolMastery
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new ProfilePage());
+            Application.Run(new FormSelectProfile());
             /*List<Test> tests = TestBuilder.createTests();
             foreach (Test test in tests)
             {

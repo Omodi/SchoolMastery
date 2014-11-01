@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace SchoolMastery.Model
 {
-    class Test
+    [Serializable]
+    public class Test
     {
-        private int score;
+        private int score = -1;
         private string name;
         private int gradeLevel;
         private List<Question> questions;
         public bool finished;
+        public Test() { }
         public Test(string n, int g, List<Question> q)
         {
             this.finished = false;
@@ -35,6 +37,18 @@ namespace SchoolMastery.Model
         public string getName()
         {
             return this.name;
+        }
+        public int getGrade()
+        {
+            int totalScore = 0;
+            foreach (Question question in this.questions)
+            {
+                if (totalScore > 0) { 
+                    totalScore += question.score; 
+                }
+                
+            }
+            return totalScore / questions.Count;
         }
     }
 

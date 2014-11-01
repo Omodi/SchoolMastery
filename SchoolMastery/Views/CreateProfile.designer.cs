@@ -55,6 +55,7 @@
             this.createButton.TabIndex = 3;
             this.createButton.Text = "Create";
             this.createButton.UseVisualStyleBackColor = true;
+            this.createButton.Click += new System.EventHandler(this.createButton_Click);
             // 
             // cancelButton
             // 
@@ -64,6 +65,7 @@
             this.cancelButton.TabIndex = 5;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // pictureBox1
             // 
@@ -81,7 +83,7 @@
             this.kittyPic.Size = new System.Drawing.Size(200, 200);
             this.kittyPic.TabIndex = 7;
             this.kittyPic.TabStop = false;
-            this.kittyPic.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.kittyPic.Click += new System.EventHandler(this.kittyPic_Click);
             // 
             // puppyPic
             // 
@@ -91,6 +93,7 @@
             this.puppyPic.Size = new System.Drawing.Size(200, 200);
             this.puppyPic.TabIndex = 8;
             this.puppyPic.TabStop = false;
+            this.puppyPic.Click += new System.EventHandler(this.puppyPic_Click);
             // 
             // cowPic
             // 
@@ -100,6 +103,7 @@
             this.cowPic.Size = new System.Drawing.Size(200, 200);
             this.cowPic.TabIndex = 9;
             this.cowPic.TabStop = false;
+            this.cowPic.Click += new System.EventHandler(this.cowPic_Click);
             // 
             // nameLabel
             // 
@@ -140,6 +144,7 @@
             // gradeDropDown
             // 
             this.gradeDropDown.AutoCompleteCustomSource.AddRange(new string[] {
+            "Kindergarten",
             "Grade 1",
             "Grade 2",
             "Grade 3",

@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace SchoolMastery.Model
 {
-    class Question
+    [Serializable]
+    public class Question
     {
         private Question helpQuestion;
         private string question;
         private string correctAnswer;
         private List<string> answers;
+        public int score = -1;
+        public Question() { }
         public Question(Question help, string q, List<string> a, string correct)
         {
             this.helpQuestion = help;
