@@ -24,6 +24,7 @@ namespace WindowsFormsApplication1
             testImage.Size = new System.Drawing.Size(200,200);
             testImage.Location = new System.Drawing.Point(440, 201);
             selectedProfile = null;
+            this.puppySelected.Hide();
             //Profile test = new Profile(testImage, "Test", "1111113");
             //test.WriteXML();
             //List<Profile> profiles = ReadXML();
@@ -88,14 +89,20 @@ namespace WindowsFormsApplication1
         private void plusPic_Click(object sender, EventArgs e)
         {
             FormCreateProfile a = new FormCreateProfile();
+<<<<<<< HEAD
             a.Show();
+=======
+            this.Close();
+            a.ShowDialog();
+
+>>>>>>> 35e3055a8a3e755ad3b0d07e42e451a8899738ec
         }
 
         private void createNewProfileTextBox_TextChanged(object sender, EventArgs e)
         {
             FormCreateProfile a = new FormCreateProfile();
-            a.Activate();
-            this.Close();
+            this.Hide();
+            a.ShowDialog();
         }
 
         private void puppyPic_Click(object sender, EventArgs e)
@@ -109,8 +116,8 @@ namespace WindowsFormsApplication1
         private void selectButton_Click(object sender, EventArgs e)
         {
             Form mainMenu = new FormMainMenu(this.selectedProfile);
-            //mainMenu.Activate();
-            mainMenu.Show();
+            this.Hide();
+            mainMenu.ShowDialog();
         }
 
         private void label1_Click(object sender, EventArgs e)

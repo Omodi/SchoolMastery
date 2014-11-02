@@ -15,12 +15,15 @@ namespace WindowsFormsApplication1
     {
         private Question question;
         private Test test;
+        private Profile profile;
         public FormQuestion(Profile profile, Test test)
         {
             this.test = test;
+            this.profile = profile;
             InitializeComponent();
             progressBar.Value = test.getProgress();
             Question question = test.getQuestions()[test.problemIndex];
+            this.profile.currentTest = test;
             this.question = question;
             QuestionTextBox.Text = question.getQuestion();
             radioButton1.Text = question.getAnswers()[0];
@@ -31,30 +34,77 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string checkedButton = "invalid";
+            int checkedButton = 0;
             if (radioButton1.Checked)
             {
-                checkedButton = radioButton1.Text;
+                checkedButton = 1;
             }
             else if(radioButton2.Checked)
             {
-                checkedButton = radioButton2.Text;
+                checkedButton = 2;
             }
             else if (radioButton3.Checked)
             {
-                checkedButton = radioButton3.Text;
+                checkedButton = 3;
             }
             else if (radioButton4.Checked)
             {
-                checkedButton = radioButton4.Text;
+                checkedButton = 4;
             }
-            if (checkedButton == this.question.getCorrectAnswer())
+            if (checkedButton.ToString() == this.question.getCorrectAnswer())
             {
                 this.question.correct = true;
-                this.test.finished = true;
-                this.test.problemIndex++;
                 var result = MessageBox.Show("You were correct!");
+                this.question.correct = true;
+                this.test.problemIndex++;
+                if (this.test.problemIndex >= this.test.getQuestions().Count)
+                {
+                    this.test.finished = true;
+                    FormTestFinished newForm = new FormTestFinished( this.profile, this.test);
+                    this.Hide();
+                    newForm.ShowDialog();
+                }
+                else
+                {
+                    FormQuestion newForm = new FormQuestion(this.profile, this.test);
+                    this.Hide();
+                    newForm.ShowDialog();
+                }
             }
+            else
+            {
+                this.question.correct = false;
+                var result = MessageBox.Show("You were incorrect!\nThe correct answer was " + question.getAnswers()[Convert.ToInt32(question.getCorrectAnswer())- 1]);
+                this.question.correct = false;
+                this.test.problemIndex++;
+                if (this.test.problemIndex >= this.test.getQuestions().Count)
+                {
+                    this.test.finished = true;
+                    FormTestFinished newForm = new FormTestFinished(this.profile, this.test);
+                    this.Hide();
+                    newForm.ShowDialog();
+                }
+                else
+                {
+                    FormQuestion newForm = new FormQuestion(this.profile, this.test);
+                    this.Hide();
+                    newForm.ShowDialog();
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormMainMenu newForm = new FormMainMenu(this.profile);
+            this.Hide();
+            newForm.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormQuestionHelp newForm = new FormQuestionHelp(this.profile, this.test, this.question);
+            this.Hide();
+            newForm.ShowDialog();
         }
     }
 }

@@ -15,6 +15,7 @@ namespace SchoolMastery.Model
         private String name;
         //private enum Grade {k, First, Secound, Fourth, Fith, Sixth, Seventh, Eighth, Nineth, Tenth, Eleventh, Twelfth};
         private int gradeLevel;
+        public Test currentTest = null;
         //public List<Test> tests = new List<Test>();
         public Profile(){}
         public Profile(PictureBox pic, String n, String g){

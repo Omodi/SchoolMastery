@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SchoolMastery.Model
 {
     [Serializable]
     public class Test
     {
-        private int score = -1;
         private string name;
         private int gradeLevel;
         private List<Question> questions;
@@ -27,7 +27,15 @@ namespace SchoolMastery.Model
         }
         public int getScore()
         {
-            return this.score;
+            int sum = 0;
+            foreach (Question question in this.questions)
+            {
+                if (question.correct) 
+                {
+                    sum++; 
+                }
+            }
+            return Convert.ToInt32(Convert.ToDouble(sum) / Convert.ToDouble(questions.Count) * 100);
         }
         public int getGradeLevel()
         {
@@ -49,7 +57,9 @@ namespace SchoolMastery.Model
             }
             else
             {
-                return questions.Count / problemIndex;
+                double index = Convert.ToDouble(problemIndex);
+                double count = Convert.ToDouble(questions.Count);
+                return Convert.ToInt32(( index/ count) * 100);
             }
         }
     }

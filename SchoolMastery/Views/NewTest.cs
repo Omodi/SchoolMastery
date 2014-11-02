@@ -53,7 +53,10 @@ namespace WindowsFormsApplication1
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FormMainMenu newForm = new FormMainMenu(this.profile);
+            this.Hide();
+            newForm.ShowDialog();
+
         }
 
         private void startbutton_Click(object sender, EventArgs e)
@@ -77,6 +80,11 @@ namespace WindowsFormsApplication1
         private void comboBoxTest_SelectedIndexChanged(object sender, EventArgs e)
         {
             startbutton.Enabled = true;
+        }
+
+        private void QuestionTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

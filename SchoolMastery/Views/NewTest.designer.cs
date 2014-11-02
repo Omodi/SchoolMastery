@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.cancelButton = new System.Windows.Forms.Button();
-            this.Question = new System.Windows.Forms.TextBox();
             this.startbutton = new System.Windows.Forms.Button();
             this.subjectLabel = new System.Windows.Forms.Label();
             this.comboBoxSubject = new System.Windows.Forms.ComboBox();
             this.comboBoxTest = new System.Windows.Forms.ComboBox();
             this.labelTest = new System.Windows.Forms.Label();
+            this.QuestionTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // cancelButton
@@ -43,21 +43,9 @@
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(150, 51);
             this.cancelButton.TabIndex = 5;
-            this.cancelButton.Text = "Cancel";
+            this.cancelButton.Text = "Return";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
-            // 
-            // Question
-            // 
-            this.Question.AcceptsReturn = true;
-            this.Question.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Question.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Question.Location = new System.Drawing.Point(20, 12);
-            this.Question.Multiline = true;
-            this.Question.Name = "Question";
-            this.Question.ReadOnly = true;
-            this.Question.Size = new System.Drawing.Size(925, 599);
-            this.Question.TabIndex = 6;
             // 
             // startbutton
             // 
@@ -72,7 +60,7 @@
             // subjectLabel
             // 
             this.subjectLabel.AutoSize = true;
-            this.subjectLabel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.subjectLabel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.subjectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subjectLabel.Location = new System.Drawing.Point(59, 48);
             this.subjectLabel.Name = "subjectLabel";
@@ -101,7 +89,7 @@
             // labelTest
             // 
             this.labelTest.AutoSize = true;
-            this.labelTest.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.labelTest.BackColor = System.Drawing.SystemColors.ControlLight;
             this.labelTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTest.Location = new System.Drawing.Point(59, 164);
             this.labelTest.Name = "labelTest";
@@ -109,11 +97,25 @@
             this.labelTest.TabIndex = 15;
             this.labelTest.Text = "Test";
             // 
+            // QuestionTextBox
+            // 
+            this.QuestionTextBox.AcceptsReturn = true;
+            this.QuestionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.QuestionTextBox.Enabled = false;
+            this.QuestionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuestionTextBox.Location = new System.Drawing.Point(12, 12);
+            this.QuestionTextBox.Multiline = true;
+            this.QuestionTextBox.Name = "QuestionTextBox";
+            this.QuestionTextBox.ReadOnly = true;
+            this.QuestionTextBox.Size = new System.Drawing.Size(925, 569);
+            this.QuestionTextBox.TabIndex = 16;
+            this.QuestionTextBox.TextChanged += new System.EventHandler(this.QuestionTextBox_TextChanged);
+            // 
             // FormNewTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(964, 680);
             this.Controls.Add(this.labelTest);
@@ -121,8 +123,8 @@
             this.Controls.Add(this.comboBoxSubject);
             this.Controls.Add(this.subjectLabel);
             this.Controls.Add(this.startbutton);
-            this.Controls.Add(this.Question);
             this.Controls.Add(this.cancelButton);
+            this.Controls.Add(this.QuestionTextBox);
             this.Name = "FormNewTest";
             this.Text = "New Test";
             this.ResumeLayout(false);
@@ -133,12 +135,12 @@
         #endregion
 
         private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.TextBox Question;
         private System.Windows.Forms.Button startbutton;
         private System.Windows.Forms.Label subjectLabel;
         private System.Windows.Forms.ComboBox comboBoxSubject;
         private System.Windows.Forms.ComboBox comboBoxTest;
         private System.Windows.Forms.Label labelTest;
+        private System.Windows.Forms.TextBox QuestionTextBox;
     }
 }
 
