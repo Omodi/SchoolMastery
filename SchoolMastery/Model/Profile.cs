@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SchoolMastery.Model
 {
@@ -41,12 +42,16 @@ namespace SchoolMastery.Model
         {
             return this.gradeLevel;
         }
+        public PictureBox getPicture()
+        {
+            return profilePicture;
+        }
         public void WriteXML()
         {
             System.Xml.Serialization.XmlSerializer writer =
             new System.Xml.Serialization.XmlSerializer(typeof(Profile));
             System.IO.StreamWriter file = new System.IO.StreamWriter(
-                @"SchoolMastery\"+this.name + ".xml");
+                Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName).FullName + @"\SchoolMastery\"+this.name + ".xml");
             writer.Serialize(file, this);
             file.Close();
         }

@@ -1,4 +1,5 @@
-﻿namespace WindowsFormsApplication1
+﻿using System;
+namespace WindowsFormsApplication1
 {
     partial class FormCreateProfile
     {
@@ -39,6 +40,8 @@
             this.animalLabel = new System.Windows.Forms.Label();
             this.gradeDropDown = new System.Windows.Forms.ComboBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.blueBackground = new System.Windows.Forms.TextBox();
+            this.selectionIndicator = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kittyPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.puppyPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cowPic)).BeginInit();
@@ -146,7 +149,22 @@
             "Grade 10",
             "Grade 11",
             "Grade 12"});
+            this.gradeDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.gradeDropDown.FormattingEnabled = true;
+            this.gradeDropDown.Items.AddRange(new object[] {
+            "Kindergarten",
+            "Grade 1",
+            "Grade 2",
+            "Grade 3",
+            "Grade 4",
+            "Grade 5",
+            "Grade 6",
+            "Grade 7",
+            "Grade 8",
+            "Grade 9",
+            "Grade 10",
+            "Grade 11",
+            "Grade 12"});
             this.gradeDropDown.Location = new System.Drawing.Point(332, 159);
             this.gradeDropDown.Name = "gradeDropDown";
             this.gradeDropDown.Size = new System.Drawing.Size(121, 21);
@@ -158,6 +176,30 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(121, 20);
             this.nameTextBox.TabIndex = 14;
+            // 
+            // blueBackground
+            // 
+            this.blueBackground.AcceptsReturn = true;
+            this.blueBackground.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.blueBackground.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blueBackground.Location = new System.Drawing.Point(12, 12);
+            this.blueBackground.Multiline = true;
+            this.blueBackground.Name = "blueBackground";
+            this.blueBackground.ReadOnly = true;
+            this.blueBackground.Size = new System.Drawing.Size(925, 588);
+            this.blueBackground.TabIndex = 15;
+            // 
+            // selectionIndicator
+            // 
+            this.selectionIndicator.AcceptsReturn = true;
+            this.selectionIndicator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.selectionIndicator.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectionIndicator.Location = new System.Drawing.Point(152, 287);
+            this.selectionIndicator.Multiline = true;
+            this.selectionIndicator.Name = "selectionIndicator";
+            this.selectionIndicator.ReadOnly = true;
+            this.selectionIndicator.Size = new System.Drawing.Size(220, 220);
+            this.selectionIndicator.TabIndex = 16;
             // 
             // FormCreateProfile
             // 
@@ -176,6 +218,7 @@
             this.Controls.Add(this.kittyPic);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.createButton);
+            this.Controls.Add(this.selectionIndicator);
             this.Name = "FormCreateProfile";
             this.Text = "Create Profile";
             ((System.ComponentModel.ISupportInitialize)(this.kittyPic)).EndInit();
@@ -198,6 +241,8 @@
         private System.Windows.Forms.Label animalLabel;
         private System.Windows.Forms.ComboBox gradeDropDown;
         private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.TextBox blueBackground;
+        private System.Windows.Forms.TextBox selectionIndicator;
     }
 }
 
