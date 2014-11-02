@@ -45,7 +45,7 @@ namespace SchoolMastery.Model
             System.Xml.Serialization.XmlSerializer writer =
             new System.Xml.Serialization.XmlSerializer(typeof(Profile));
             System.IO.StreamWriter file = new System.IO.StreamWriter(
-                @"C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\"+this.name + ".xml");
+                @"SchoolMastery\"+this.name + ".xml");
             writer.Serialize(file, this);
             file.Close();
         }

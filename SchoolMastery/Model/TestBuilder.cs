@@ -10,7 +10,8 @@ namespace SchoolMastery.Model
 {
     public class TestBuilder
     {
-        private static string folderName = @"C:\Users\Steven\SchoolMastery\SchoolMastery\Tests";
+        //private static string folderName = System.Environment.CurrentDirectory + @"\SchoolMastery\Tests\";
+        private static string folderName = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName).FullName + @"\SchoolMastery\Tests\";
         private static List<Test> tests = new List<Test>();
         public static List<string> getFileNames()
         {
