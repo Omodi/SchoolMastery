@@ -14,13 +14,16 @@ namespace SchoolMastery.Model
         private int gradeLevel;
         private List<Question> questions;
         public bool finished;
+        public int problemIndex = 0;
+        public string subject;
         public Test() { }
-        public Test(string n, int g, List<Question> q)
+        public Test(string n, int g, List<Question> q, string s)
         {
             this.finished = false;
             this.gradeLevel = g;
             this.questions = q;
             this.name = n;
+            this.subject = s;
         }
         public int getScore()
         {
@@ -38,7 +41,7 @@ namespace SchoolMastery.Model
         {
             return this.name;
         }
-        public int getGrade()
+        public int getAvgGrade()
         {
             int totalScore = 0;
             foreach (Question question in this.questions)
@@ -49,6 +52,10 @@ namespace SchoolMastery.Model
                 
             }
             return totalScore / questions.Count;
+        }
+        public int getProgress()
+        {
+            return questions.Count / problemIndex;
         }
     }
 

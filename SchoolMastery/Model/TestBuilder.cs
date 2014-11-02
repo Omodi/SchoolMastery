@@ -10,7 +10,7 @@ namespace SchoolMastery.Model
 {
     public class TestBuilder
     {
-        private static string folderName = "C:\\Users\\Steven\\Downloads\\SchoolMastery\\SchoolMastery\\Tests";
+        private static string folderName = @"C:\Users\Steven\SchoolMastery\SchoolMastery\Tests";
         private static List<Test> tests = new List<Test>();
         public static List<string> getFileNames()
         {
@@ -36,7 +36,9 @@ namespace SchoolMastery.Model
                 using (StreamReader sr = new StreamReader(fileName))
                 {
                     string name = sr.ReadLine();
+                    string subject = sr.ReadLine();
                     string gradeLevel = sr.ReadLine();
+                    
                     List<Question> questions = new List<Question>();
                     while(sr.Peek() >= 0){
                         string line = sr.ReadLine();
@@ -60,7 +62,7 @@ namespace SchoolMastery.Model
                             questions.Add(new Question(help, questionText, answers, correct));
                         }
                     }
-                    Test test = new Test(name, Convert.ToInt32(gradeLevel), questions);
+                    Test test = new Test(name, Convert.ToInt32(gradeLevel), questions, subject);
                     return test;
                 }
             }

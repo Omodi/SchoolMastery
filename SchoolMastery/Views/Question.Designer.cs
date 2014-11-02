@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Question = new System.Windows.Forms.TextBox();
+            this.QuestionTextBox = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -39,21 +39,23 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Question
+            // QuestionTextBox
             // 
-            this.Question.AcceptsReturn = true;
-            this.Question.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Question.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Question.Location = new System.Drawing.Point(12, 12);
-            this.Question.Multiline = true;
-            this.Question.Name = "Question";
-            this.Question.ReadOnly = true;
-            this.Question.Size = new System.Drawing.Size(925, 417);
-            this.Question.TabIndex = 0;
-            this.Question.Text = "Q: Insert nice question here... ?";
+            this.QuestionTextBox.AcceptsReturn = true;
+            this.QuestionTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.QuestionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuestionTextBox.Location = new System.Drawing.Point(12, 85);
+            this.QuestionTextBox.Multiline = true;
+            this.QuestionTextBox.Name = "QuestionTextBox";
+            this.QuestionTextBox.ReadOnly = true;
+            this.QuestionTextBox.Size = new System.Drawing.Size(925, 344);
+            this.QuestionTextBox.TabIndex = 0;
+            this.QuestionTextBox.Text = "Q: Insert nice question here... ?";
             // 
             // radioButton1
             // 
@@ -128,7 +130,7 @@
             this.radioButton2.TabIndex = 0;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Answer";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -169,6 +171,24 @@
             this.textBox2.TabIndex = 6;
             this.textBox2.Text = "     Saving Progress!";
             // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(12, 56);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(925, 23);
+            this.progressBar.Step = 1;
+            this.progressBar.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(378, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(177, 26);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Current Progress";
+            // 
             // FormQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,11 +196,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(964, 680);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.Question);
+            this.Controls.Add(this.QuestionTextBox);
             this.Controls.Add(this.panel1);
             this.Name = "FormQuestion";
             this.Text = "Question";
@@ -193,7 +215,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox Question;
+        private System.Windows.Forms.TextBox QuestionTextBox;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox1;
@@ -204,6 +226,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Label label1;
     }
 }
 

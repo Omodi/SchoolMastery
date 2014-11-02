@@ -132,6 +132,9 @@
     <EmbeddedResource Include="Views\NewTest.resx">
       <DependentUpon>NewTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Question.resx">
+      <DependentUpon>Question.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\SelectProfile.resx">
       <DependentUpon>SelectProfile.cs</DependentUpon>
     </EmbeddedResource>

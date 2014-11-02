@@ -18,7 +18,7 @@ namespace SchoolMastery
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormSelectProfile());
+            Application.Run(new FormNewTest(new Profile(null,"Steven", "2222222")));
             /*List<Test> tests = TestBuilder.createTests();
             foreach (Test test in tests)
             {

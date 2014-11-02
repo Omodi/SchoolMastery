@@ -43,8 +43,9 @@
             this.returnButton.Name = "returnButton";
             this.returnButton.Size = new System.Drawing.Size(150, 51);
             this.returnButton.TabIndex = 5;
-            this.returnButton.Text = "Return";
+            this.returnButton.Text = "Exit";
             this.returnButton.UseVisualStyleBackColor = true;
+            this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
             // 
             // Question
             // 
@@ -88,6 +89,7 @@
             this.statisticsButton.TabIndex = 9;
             this.statisticsButton.Text = "Statistics";
             this.statisticsButton.UseVisualStyleBackColor = true;
+            this.statisticsButton.Click += new System.EventHandler(this.statisticsButton_Click);
             // 
             // startNewTestButton
             // 

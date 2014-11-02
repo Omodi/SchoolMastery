@@ -28,9 +28,17 @@ namespace SchoolMastery.Model
                 this.gradeLevel = Convert.ToInt32(g.Substring(6));
             }
         }
-        public void changeGrade(int g)
+        public void changeGradeLevel(int g)
         {
             this.gradeLevel = g;
+        }
+        public string getName()
+        {
+            return this.name;
+        }
+        public int getGradeLevel()
+        {
+            return this.gradeLevel;
         }
         public void WriteXML()
         {
