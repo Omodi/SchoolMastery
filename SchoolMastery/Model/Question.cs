@@ -13,7 +13,7 @@ namespace SchoolMastery.Model
         private string question;
         private string correctAnswer;
         private List<string> answers;
-        public int score = -1;
+        public bool correct;
         public Question() { }
         public Question(Question help, string q, List<string> a, string correct)
         {

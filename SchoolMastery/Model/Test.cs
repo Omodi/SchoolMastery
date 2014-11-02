@@ -41,21 +41,16 @@ namespace SchoolMastery.Model
         {
             return this.name;
         }
-        public int getAvgGrade()
-        {
-            int totalScore = 0;
-            foreach (Question question in this.questions)
-            {
-                if (totalScore > 0) { 
-                    totalScore += question.score; 
-                }
-                
-            }
-            return totalScore / questions.Count;
-        }
         public int getProgress()
         {
-            return questions.Count / problemIndex;
+            if (problemIndex == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return questions.Count / problemIndex;
+            }
         }
     }
 
