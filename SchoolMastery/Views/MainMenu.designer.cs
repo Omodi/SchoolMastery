@@ -1,4 +1,5 @@
-﻿namespace WindowsFormsApplication1
+﻿using SchoolMastery.Model;
+namespace WindowsFormsApplication1
 {
     partial class FormMainMenu
     {
@@ -26,7 +27,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent(Profile profile)
         {
             this.returnButton = new System.Windows.Forms.Button();
             this.Question = new System.Windows.Forms.TextBox();
