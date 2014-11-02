@@ -40,12 +40,8 @@ namespace WindowsFormsApplication1
             this.animalLabel = new System.Windows.Forms.Label();
             this.gradeDropDown = new System.Windows.Forms.ComboBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
-<<<<<<< HEAD
             this.blueBackground = new System.Windows.Forms.TextBox();
             this.selectionIndicator = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-=======
->>>>>>> 35e3055a8a3e755ad3b0d07e42e451a8899738ec
             ((System.ComponentModel.ISupportInitialize)(this.kittyPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.puppyPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cowPic)).BeginInit();
@@ -181,7 +177,6 @@ namespace WindowsFormsApplication1
             this.nameTextBox.Size = new System.Drawing.Size(121, 20);
             this.nameTextBox.TabIndex = 14;
             // 
-<<<<<<< HEAD
             // blueBackground
             // 
             this.blueBackground.AcceptsReturn = true;
@@ -197,7 +192,7 @@ namespace WindowsFormsApplication1
             // selectionIndicator
             // 
             this.selectionIndicator.AcceptsReturn = true;
-            this.selectionIndicator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selectionIndicator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.selectionIndicator.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectionIndicator.Location = new System.Drawing.Point(152, 287);
             this.selectionIndicator.Multiline = true;
@@ -206,8 +201,6 @@ namespace WindowsFormsApplication1
             this.selectionIndicator.Size = new System.Drawing.Size(220, 220);
             this.selectionIndicator.TabIndex = 16;
             // 
-=======
->>>>>>> 35e3055a8a3e755ad3b0d07e42e451a8899738ec
             // FormCreateProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,24 +208,17 @@ namespace WindowsFormsApplication1
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(964, 680);
-            this.Controls.Add(this.cowPic);
-            this.Controls.Add(this.kittyPic);
-            this.Controls.Add(this.puppyPic);
-            this.Controls.Add(this.selectionIndicator);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.gradeDropDown);
             this.Controls.Add(this.animalLabel);
             this.Controls.Add(this.gradeLabel);
             this.Controls.Add(this.nameLabel);
-<<<<<<< HEAD
-            this.Controls.Add(this.pictureBox1);
-=======
             this.Controls.Add(this.cowPic);
             this.Controls.Add(this.puppyPic);
             this.Controls.Add(this.kittyPic);
->>>>>>> 35e3055a8a3e755ad3b0d07e42e451a8899738ec
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.createButton);
+            this.Controls.Add(this.selectionIndicator);
             this.Name = "FormCreateProfile";
             this.Text = "Create Profile";
             ((System.ComponentModel.ISupportInitialize)(this.kittyPic)).EndInit();
@@ -255,11 +241,8 @@ namespace WindowsFormsApplication1
         private System.Windows.Forms.Label animalLabel;
         private System.Windows.Forms.ComboBox gradeDropDown;
         private System.Windows.Forms.TextBox nameTextBox;
-<<<<<<< HEAD
         private System.Windows.Forms.TextBox blueBackground;
         private System.Windows.Forms.TextBox selectionIndicator;
-=======
->>>>>>> 35e3055a8a3e755ad3b0d07e42e451a8899738ec
     }
 }
 
