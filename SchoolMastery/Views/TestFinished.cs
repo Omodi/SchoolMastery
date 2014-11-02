@@ -13,24 +13,28 @@ namespace WindowsFormsApplication1
 {
     public partial class FormTestFinished : Form
     {
+        private Profile profile;
         public FormTestFinished(Profile profile, Test test)
         {
+            this.profile = profile;
+            profile.currentTest = null;
             InitializeComponent();
+            int score = test.getScore();
+            if (score > 50)
+            {
+                congratsLabel.Text = "Congratulations!\nYou passed!\n\nScore: " + score.ToString();
+            }
+            else
+            {
+                congratsLabel.Text = "Better Luck next time!\nYou failed!\n\nScore: " + score.ToString();
+            }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void returnButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
+            FormMainMenu newForm = new FormMainMenu(this.profile);
+            this.Hide();
+            newForm.ShowDialog();
         }
     }
 }

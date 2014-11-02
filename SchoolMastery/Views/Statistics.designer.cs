@@ -30,16 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStatistics));
             this.returnButton = new System.Windows.Forms.Button();
-            this.graphPic = new System.Windows.Forms.PictureBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.highScoreLabel = new System.Windows.Forms.Label();
+            this.graphPic = new System.Windows.Forms.PictureBox();
             this.averageTestLabel = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.highScoreLabel = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.graphPic)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // returnButton
@@ -50,27 +48,7 @@
             this.returnButton.TabIndex = 5;
             this.returnButton.Text = "Return";
             this.returnButton.UseVisualStyleBackColor = true;
-            // 
-            // graphPic
-            // 
-            this.graphPic.Image = ((System.Drawing.Image)(resources.GetObject("graphPic.Image")));
-            this.graphPic.Location = new System.Drawing.Point(205, 66);
-            this.graphPic.Name = "graphPic";
-            this.graphPic.Size = new System.Drawing.Size(484, 295);
-            this.graphPic.TabIndex = 7;
-            this.graphPic.TabStop = false;
-            this.graphPic.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 10);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(925, 601);
-            this.tabControl1.TabIndex = 17;
+            this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
             // 
             // tabPage1
             // 
@@ -85,15 +63,15 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Math";
             // 
-            // highScoreLabel
+            // graphPic
             // 
-            this.highScoreLabel.AutoSize = true;
-            this.highScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.highScoreLabel.Location = new System.Drawing.Point(139, 475);
-            this.highScoreLabel.Name = "highScoreLabel";
-            this.highScoreLabel.Size = new System.Drawing.Size(156, 26);
-            this.highScoreLabel.TabIndex = 9;
-            this.highScoreLabel.Text = "High Score: 92";
+            this.graphPic.Image = ((System.Drawing.Image)(resources.GetObject("graphPic.Image")));
+            this.graphPic.Location = new System.Drawing.Point(205, 66);
+            this.graphPic.Name = "graphPic";
+            this.graphPic.Size = new System.Drawing.Size(484, 295);
+            this.graphPic.TabIndex = 7;
+            this.graphPic.TabStop = false;
+            this.graphPic.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // averageTestLabel
             // 
@@ -105,24 +83,24 @@
             this.averageTestLabel.TabIndex = 8;
             this.averageTestLabel.Text = "Average Test Score: 72";
             // 
-            // tabPage2
+            // highScoreLabel
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(917, 575);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Science";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.highScoreLabel.AutoSize = true;
+            this.highScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highScoreLabel.Location = new System.Drawing.Point(139, 475);
+            this.highScoreLabel.Name = "highScoreLabel";
+            this.highScoreLabel.Size = new System.Drawing.Size(156, 26);
+            this.highScoreLabel.TabIndex = 9;
+            this.highScoreLabel.Text = "High Score: 92";
             // 
-            // tabPage3
+            // tabControl1
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(917, 575);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "History";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Location = new System.Drawing.Point(12, 10);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(925, 601);
+            this.tabControl1.TabIndex = 17;
             // 
             // FormStatistics
             // 
@@ -135,10 +113,10 @@
             this.Controls.Add(this.returnButton);
             this.Name = "FormStatistics";
             this.Text = "Statistics";
-            ((System.ComponentModel.ISupportInitialize)(this.graphPic)).EndInit();
-            this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.graphPic)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -146,13 +124,11 @@
         #endregion
 
         private System.Windows.Forms.Button returnButton;
-        private System.Windows.Forms.PictureBox graphPic;
-        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label highScoreLabel;
         private System.Windows.Forms.Label averageTestLabel;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.PictureBox graphPic;
+        private System.Windows.Forms.TabControl tabControl1;
     }
 }
 

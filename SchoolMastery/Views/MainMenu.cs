@@ -20,6 +20,14 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             nameLabel.Text = profile.getName();
             gradeLabel.Text = "Grade " + profile.getGradeLevel().ToString();
+            if (this.profile.currentTest == null)
+            {
+                loadTestButton.Enabled = false;
+            }
+            else
+            {
+                loadTestButton.Enabled = true;
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -46,9 +54,9 @@ namespace WindowsFormsApplication1
 
         private void statisticsButton_Click(object sender, EventArgs e)
         {
-            FormStatistics a = new FormStatistics();
-            a.Activate();
-            this.Close();
+            FormStatistics a = new FormStatistics(this.profile);
+            this.Hide();
+            a.ShowDialog();
         }
     }
 }

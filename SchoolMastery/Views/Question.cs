@@ -23,6 +23,7 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             progressBar.Value = test.getProgress();
             Question question = test.getQuestions()[test.problemIndex];
+            this.profile.currentTest = test;
             this.question = question;
             QuestionTextBox.Text = question.getQuestion();
             radioButton1.Text = question.getAnswers()[0];
