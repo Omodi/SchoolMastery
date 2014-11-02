@@ -89,6 +89,7 @@ namespace WindowsFormsApplication1
         private void plusPic_Click(object sender, EventArgs e)
         {
             FormCreateProfile a = new FormCreateProfile();
+            this.Hide();
             a.Show();
         }
 

@@ -90,14 +90,14 @@ namespace WindowsFormsApplication1
         private void plusPic_Click(object sender, EventArgs e)
         {
             FormCreateProfile a = new FormCreateProfile();
-            a.Activate();
-            this.Close();
+            this.Hide();
+            a.ShowDialog();
         }
 
         private void createNewProfileTextBox_TextChanged(object sender, EventArgs e)
         {
             Form a = new FormCreateProfile();
-            a.Show();
+            a.ShowDialog();
         }
 
         private void puppyPic_Click(object sender, EventArgs e)
@@ -112,7 +112,8 @@ namespace WindowsFormsApplication1
         {
             Form mainMenu = new FormMainMenu(this.selectedProfile);
             //mainMenu.Activate();
-            mainMenu.Show();
+            this.Hide();
+            mainMenu.ShowDialog();
         }
 
         private void label1_Click(object sender, EventArgs e)

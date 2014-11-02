@@ -32,7 +32,8 @@ namespace WindowsFormsApplication1
             //{
                 Profile profile = new Profile(currentPicture, nameTextBox.Text, gradeDropDown.SelectedItem.ToString());
                 FormSelectProfileNew a = new FormSelectProfileNew(profile);
-                a.Show();
+                this.Hide();
+                a.ShowDialog();
             //}
             //catch (NullReferenceException) { }
         }
@@ -52,8 +53,9 @@ namespace WindowsFormsApplication1
         private void cancelButton_Click(object sender, EventArgs e)
         {
             FormSelectProfile a = new FormSelectProfile();
-            a.Activate();
-            this.Close();
+            a.BackColor = System.Drawing.SystemColors.Window;
+            this.Hide();
+            a.ShowDialog();
         }
 
     }
