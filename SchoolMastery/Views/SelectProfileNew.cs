@@ -12,18 +12,20 @@ using System.IO;
 
 namespace WindowsFormsApplication1
 {
-    public partial class FormSelectProfile : Form
+    public partial class FormSelectProfileNew : Form
     {
         private Profile selectedProfile;
+        private Profile newProfile;
 
-        public FormSelectProfile()
+        public FormSelectProfileNew(Profile newProfile)
         {
+            this.selectedProfile = newProfile;
+            this.newProfile = newProfile;
             InitializeComponent();
             PictureBox testImage = new PictureBox();
             testImage.Image = plusPic.Image;
             testImage.Size = new System.Drawing.Size(200,200);
             testImage.Location = new System.Drawing.Point(440, 201);
-            selectedProfile = null;
             //Profile test = new Profile(testImage, "Test", "1111113");
             //test.WriteXML();
             //List<Profile> profiles = ReadXML();
@@ -88,14 +90,14 @@ namespace WindowsFormsApplication1
         private void plusPic_Click(object sender, EventArgs e)
         {
             FormCreateProfile a = new FormCreateProfile();
-            a.Show();
+            a.Activate();
+            this.Close();
         }
 
         private void createNewProfileTextBox_TextChanged(object sender, EventArgs e)
         {
-            FormCreateProfile a = new FormCreateProfile();
-            a.Activate();
-            this.Close();
+            Form a = new FormCreateProfile();
+            a.Show();
         }
 
         private void puppyPic_Click(object sender, EventArgs e)
@@ -103,7 +105,7 @@ namespace WindowsFormsApplication1
             this.selectButton.Enabled = true;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSelectProfile));
             this.selectedProfile = new Profile(this.puppyPic, "Sam", "Grade 3");
-            this.puppySelected.Show();
+            this.selectionIndicator.Location = new Point(145, 191);
         }
 
         private void selectButton_Click(object sender, EventArgs e)
@@ -116,6 +118,12 @@ namespace WindowsFormsApplication1
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void customPicture_Click(object sender, EventArgs e)
+        {
+            this.selectionIndicator.Location = new System.Drawing.Point(396, 191);
+            selectedProfile = newProfile;
         }
     }
 }
