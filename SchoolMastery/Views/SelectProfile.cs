@@ -14,6 +14,8 @@ namespace WindowsFormsApplication1
 {
     public partial class FormSelectProfile : Form
     {
+        private Profile selectedProfile;
+
         public FormSelectProfile()
         {
             InitializeComponent();
@@ -21,9 +23,10 @@ namespace WindowsFormsApplication1
             testImage.Image = plusPic.Image;
             testImage.Size = new System.Drawing.Size(200,200);
             testImage.Location = new System.Drawing.Point(440, 201);
-            Profile test = new Profile(testImage, "Test", "1111113");
-            test.WriteXML();
-            List<Profile> profiles = ReadXML();
+            selectedProfile = null;
+            //Profile test = new Profile(testImage, "Test", "1111113");
+            //test.WriteXML();
+            //List<Profile> profiles = ReadXML();
             /*if (profiles.Count == 0)
             {
                 PictureBox create = new PictureBox();
@@ -62,7 +65,7 @@ namespace WindowsFormsApplication1
             foreach (string fileName in getFileNames())
             {
                 System.IO.StreamReader file = new System.IO.StreamReader(fileName);
-                profiles.Add( (Profile)reader.Deserialize(file));
+                profiles.Add( (Profile)reader.Deserialize(file) );
             }
             return profiles;
 
@@ -70,7 +73,7 @@ namespace WindowsFormsApplication1
         public static List<string> getFileNames()
         {
             List<string> fileNames = new List<string>();
-            string[] fileEntries = Directory.GetFiles(@"C:\Users\Steven\Downloads\SchoolMastery\SchoolMastery\");
+            string[] fileEntries = Directory.GetFiles(Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName).FullName + @"\SchoolMastery\");
             foreach (string fileName in fileEntries)
             {
                 fileNames.Add(fileName);
@@ -94,6 +97,26 @@ namespace WindowsFormsApplication1
             FormCreateProfile a = new FormCreateProfile();
             a.Activate();
             this.Close();
+        }
+
+        private void puppyPic_Click(object sender, EventArgs e)
+        {
+            this.selectButton.Enabled = true;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSelectProfile));
+            this.selectedProfile = new Profile(this.puppyPic, "Sam", "Grade 3");
+            this.puppySelected.Show();
+        }
+
+        private void selectButton_Click(object sender, EventArgs e)
+        {
+            Form mainMenu = new FormMainMenu(this.selectedProfile);
+            //mainMenu.Activate();
+            mainMenu.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

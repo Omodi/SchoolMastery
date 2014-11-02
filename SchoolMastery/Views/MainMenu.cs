@@ -58,5 +58,10 @@ namespace WindowsFormsApplication1
             this.Hide();
             a.ShowDialog();
         }
+
+        private void nameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
