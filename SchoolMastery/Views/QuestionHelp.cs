@@ -59,43 +59,17 @@ namespace WindowsFormsApplication1
             }
             if (checkedButton.ToString() == this.help.getCorrectAnswer())
             {
-                this.help.correct = true;
                 var result = MessageBox.Show("You were correct!");
-                this.help.correct = true;
-                this.test.problemIndex++;
-                if (this.test.problemIndex >= this.test.getQuestions().Count)
-                {
-                    this.test.finished = true;
-                    FormTestFinished newForm = new FormTestFinished(this.profile, this.test);
-                    this.Hide();
-                    newForm.ShowDialog();
-                }
-                else
-                {
-                    FormQuestion newForm = new FormQuestion(this.profile, this.test);
-                    this.Hide();
-                    newForm.ShowDialog();
-                }
+                FormQuestion newForm = new FormQuestion(this.profile, this.test);
+                this.Hide();
+                newForm.ShowDialog();
             }
             else
             {
-                this.help.correct = false;
                 var result = MessageBox.Show("You were incorrect!\nThe correct answer was " + help.getAnswers()[Convert.ToInt32(help.getCorrectAnswer()) - 1]);
-                this.help.correct = false;
-                this.test.problemIndex++;
-                if (this.test.problemIndex >= this.test.getQuestions().Count)
-                {
-                    this.test.finished = true;
-                    FormTestFinished newForm = new FormTestFinished(this.profile, this.test);
-                    this.Hide();
-                    newForm.ShowDialog();
-                }
-                else
-                {
-                    FormQuestion newForm = new FormQuestion(this.profile, this.test);
-                    this.Hide();
-                    newForm.ShowDialog();
-                }
+                FormQuestion newForm = new FormQuestion(this.profile, this.test);
+                this.Hide();
+                newForm.ShowDialog();
             }
         }
     }
