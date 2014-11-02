@@ -33,21 +33,25 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.puppyPic = new System.Windows.Forms.PictureBox();
             this.plusPic = new System.Windows.Forms.PictureBox();
-            this.sameTextBox = new System.Windows.Forms.TextBox();
-            this.grade3TextBox = new System.Windows.Forms.TextBox();
-            this.createNewProfileTextBox = new System.Windows.Forms.TextBox();
+            this.puppySelected = new System.Windows.Forms.PictureBox();
+            this.samLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.newProfileLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.puppyPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plusPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puppySelected)).BeginInit();
             this.SuspendLayout();
             // 
             // selectButton
             // 
+            this.selectButton.Enabled = false;
             this.selectButton.Location = new System.Drawing.Point(12, 617);
             this.selectButton.Name = "selectButton";
             this.selectButton.Size = new System.Drawing.Size(150, 51);
             this.selectButton.TabIndex = 3;
             this.selectButton.Text = "Select";
             this.selectButton.UseVisualStyleBackColor = true;
+            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
             // 
             // exitButton
             // 
@@ -67,6 +71,7 @@
             this.puppyPic.Size = new System.Drawing.Size(200, 200);
             this.puppyPic.TabIndex = 7;
             this.puppyPic.TabStop = false;
+            this.puppyPic.Click += new System.EventHandler(this.puppyPic_Click);
             // 
             // plusPic
             // 
@@ -78,33 +83,46 @@
             this.plusPic.TabStop = false;
             this.plusPic.Click += new System.EventHandler(this.plusPic_Click);
             // 
-            // sameTextBox
+            // puppySelected
             // 
-            this.sameTextBox.Location = new System.Drawing.Point(325, 407);
-            this.sameTextBox.Name = "sameTextBox";
-            this.sameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.sameTextBox.TabIndex = 9;
-            this.sameTextBox.Text = "Sam";
-            this.sameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.puppySelected.Image = ((System.Drawing.Image)(resources.GetObject("puppySelected.Image")));
+            this.puppySelected.Location = new System.Drawing.Point(271, 201);
+            this.puppySelected.Name = "puppySelected";
+            this.puppySelected.Size = new System.Drawing.Size(200, 200);
+            this.puppySelected.TabIndex = 12;
+            this.puppySelected.TabStop = false;
+            this.puppySelected.Hide();
             // 
-            // grade3TextBox
+            // samLabel
             // 
-            this.grade3TextBox.Location = new System.Drawing.Point(325, 433);
-            this.grade3TextBox.Name = "grade3TextBox";
-            this.grade3TextBox.Size = new System.Drawing.Size(100, 20);
-            this.grade3TextBox.TabIndex = 10;
-            this.grade3TextBox.Text = "Grade 3";
-            this.grade3TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.samLabel.AutoSize = true;
+            this.samLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.samLabel.Location = new System.Drawing.Point(356, 404);
+            this.samLabel.Name = "samLabel";
+            this.samLabel.Size = new System.Drawing.Size(42, 20);
+            this.samLabel.TabIndex = 13;
+            this.samLabel.Text = "Sam";
+            this.samLabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // createNewProfileTextBox
+            // label1
             // 
-            this.createNewProfileTextBox.Location = new System.Drawing.Point(556, 407);
-            this.createNewProfileTextBox.Name = "createNewProfileTextBox";
-            this.createNewProfileTextBox.Size = new System.Drawing.Size(100, 20);
-            this.createNewProfileTextBox.TabIndex = 11;
-            this.createNewProfileTextBox.Text = "Create New Profile";
-            this.createNewProfileTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.createNewProfileTextBox.TextChanged += new System.EventHandler(this.createNewProfileTextBox_TextChanged);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(345, 424);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Grade 3";
+            // 
+            // newProfileLabel
+            // 
+            this.newProfileLabel.AutoSize = true;
+            this.newProfileLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newProfileLabel.Location = new System.Drawing.Point(561, 404);
+            this.newProfileLabel.Name = "newProfileLabel";
+            this.newProfileLabel.Size = new System.Drawing.Size(88, 20);
+            this.newProfileLabel.TabIndex = 15;
+            this.newProfileLabel.Text = "New Profile";
             // 
             // FormSelectProfile
             // 
@@ -113,9 +131,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(964, 680);
-            this.Controls.Add(this.createNewProfileTextBox);
-            this.Controls.Add(this.grade3TextBox);
-            this.Controls.Add(this.sameTextBox);
+            this.Controls.Add(this.newProfileLabel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.samLabel);
+            this.Controls.Add(this.puppySelected);
             this.Controls.Add(this.plusPic);
             this.Controls.Add(this.puppyPic);
             this.Controls.Add(this.exitButton);
@@ -124,6 +143,7 @@
             this.Text = "Select Profile";
             ((System.ComponentModel.ISupportInitialize)(this.puppyPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plusPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puppySelected)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,9 +155,10 @@
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.PictureBox puppyPic;
         private System.Windows.Forms.PictureBox plusPic;
-        private System.Windows.Forms.TextBox sameTextBox;
-        private System.Windows.Forms.TextBox grade3TextBox;
-        private System.Windows.Forms.TextBox createNewProfileTextBox;
+        private System.Windows.Forms.PictureBox puppySelected;
+        private System.Windows.Forms.Label samLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label newProfileLabel;
     }
 }
 

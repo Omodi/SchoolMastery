@@ -68,7 +68,8 @@
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(53, 25);
             this.nameLabel.TabIndex = 7;
-            this.nameLabel.Text = "Sam";
+            this.nameLabel.Text = this.profile.getName();
+            this.nameLabel.Click += new System.EventHandler(this.nameLabel_Click);
             // 
             // gradeLabel
             // 
@@ -79,7 +80,7 @@
             this.gradeLabel.Name = "gradeLabel";
             this.gradeLabel.Size = new System.Drawing.Size(82, 25);
             this.gradeLabel.TabIndex = 8;
-            this.gradeLabel.Text = "Grade 3";
+            this.gradeLabel.Text = "Grade: " + this.profile.getGradeLevel();
             // 
             // statisticsButton
             // 

@@ -50,5 +50,10 @@ namespace WindowsFormsApplication1
             a.Activate();
             this.Close();
         }
+
+        private void nameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
