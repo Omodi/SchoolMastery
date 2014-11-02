@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SchoolMastery.Model;
 
 namespace WindowsFormsApplication1
 {
     public partial class FormTestFinished : Form
     {
-        public FormTestFinished()
+        public FormTestFinished(Profile profile, Test test)
         {
             InitializeComponent();
         }

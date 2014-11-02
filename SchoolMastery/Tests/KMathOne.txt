@@ -8,7 +8,7 @@ a3=3
 a4=4
 c=4
 qh=3+5=?
-t=You can start at five and count 3 times
+t= You can start at five and count 3 times
 s= 5 + 1 = 6, 5 + 2 = 7, 5 + 3 = ?
 a1=8
 a2=12
@@ -22,7 +22,7 @@ a3=12
 a4=10
 c=2
 qh=3+5=?
-t=You can start at five and count 3 times
+t= You can start at five and count 3 times
 s= 5 + 1 = 6, 5 + 2 = 7, 5 + 3 = ?
 a1=8
 a2=12

@@ -43,7 +43,7 @@
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(150, 51);
             this.cancelButton.TabIndex = 5;
-            this.cancelButton.Text = "Cancel";
+            this.cancelButton.Text = "Return";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
@@ -51,6 +51,7 @@
             // 
             this.Question.AcceptsReturn = true;
             this.Question.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Question.Enabled = false;
             this.Question.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Question.Location = new System.Drawing.Point(20, 12);
             this.Question.Multiline = true;

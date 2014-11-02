@@ -49,7 +49,9 @@ namespace SchoolMastery.Model
             }
             else
             {
-                return questions.Count / problemIndex;
+                double index = Convert.ToDouble(problemIndex);
+                double count = Convert.ToDouble(questions.Count);
+                return Convert.ToInt32(( index/ count) * 100);
             }
         }
     }

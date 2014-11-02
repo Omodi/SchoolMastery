@@ -35,8 +35,8 @@ namespace WindowsFormsApplication1
         private void button2_Click(object sender, EventArgs e)
         {
             FormNewTest a = new FormNewTest(profile);
-            a.Activate();
-            this.Close();
+            this.Hide();
+            a.ShowDialog();
         }
 
         private void returnButton_Click(object sender, EventArgs e)

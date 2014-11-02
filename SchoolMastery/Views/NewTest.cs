@@ -53,7 +53,10 @@ namespace WindowsFormsApplication1
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FormMainMenu newForm = new FormMainMenu(this.profile);
+            this.Hide();
+            newForm.ShowDialog();
+
         }
 
         private void startbutton_Click(object sender, EventArgs e)
