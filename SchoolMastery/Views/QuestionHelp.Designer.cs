@@ -45,7 +45,7 @@
             // QuestionTextBox
             // 
             this.QuestionTextBox.AcceptsReturn = true;
-            this.QuestionTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.QuestionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.QuestionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuestionTextBox.Location = new System.Drawing.Point(12, 164);
             this.QuestionTextBox.Multiline = true;
@@ -59,9 +59,9 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Khaki;
+            this.radioButton1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(53, 21);
+            this.radioButton1.Location = new System.Drawing.Point(53, 6);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(80, 24);
             this.radioButton1.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Khaki;
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.radioButton4);
             this.panel1.Controls.Add(this.radioButton3);
@@ -84,7 +84,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Khaki;
+            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(4, 4);
@@ -99,7 +99,7 @@
             // 
             this.radioButton4.AutoSize = true;
             this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(53, 92);
+            this.radioButton4.Location = new System.Drawing.Point(53, 96);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(80, 24);
             this.radioButton4.TabIndex = 2;
@@ -111,7 +111,7 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(53, 68);
+            this.radioButton3.Location = new System.Drawing.Point(53, 66);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(80, 24);
             this.radioButton3.TabIndex = 1;
@@ -123,7 +123,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(53, 44);
+            this.radioButton2.Location = new System.Drawing.Point(53, 36);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(80, 24);
             this.radioButton2.TabIndex = 0;
@@ -154,7 +154,7 @@
             // Tips
             // 
             this.Tips.AcceptsReturn = true;
-            this.Tips.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.Tips.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Tips.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tips.Location = new System.Drawing.Point(12, 23);
             this.Tips.Multiline = true;
@@ -168,7 +168,7 @@
             // Steps
             // 
             this.Steps.AcceptsReturn = true;
-            this.Steps.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.Steps.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Steps.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Steps.Location = new System.Drawing.Point(12, 337);
             this.Steps.Multiline = true;
@@ -183,7 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(964, 680);
             this.Controls.Add(this.Steps);

@@ -24,6 +24,7 @@ namespace WindowsFormsApplication1
             testImage.Size = new System.Drawing.Size(200,200);
             testImage.Location = new System.Drawing.Point(440, 201);
             selectedProfile = null;
+            this.puppySelected.Hide();
             //Profile test = new Profile(testImage, "Test", "1111113");
             //test.WriteXML();
             //List<Profile> profiles = ReadXML();

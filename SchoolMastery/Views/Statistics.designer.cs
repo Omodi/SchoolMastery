@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStatistics));
             this.returnButton = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.graphPic = new System.Windows.Forms.PictureBox();
-            this.averageTestLabel = new System.Windows.Forms.Label();
             this.highScoreLabel = new System.Windows.Forms.Label();
+            this.averageTestLabel = new System.Windows.Forms.Label();
+            this.graphPic = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.graphPic)).BeginInit();
@@ -52,7 +52,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tabPage1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.tabPage1.Controls.Add(this.highScoreLabel);
             this.tabPage1.Controls.Add(this.averageTestLabel);
             this.tabPage1.Controls.Add(this.graphPic);
@@ -63,15 +63,15 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Math";
             // 
-            // graphPic
+            // highScoreLabel
             // 
-            this.graphPic.Image = ((System.Drawing.Image)(resources.GetObject("graphPic.Image")));
-            this.graphPic.Location = new System.Drawing.Point(205, 66);
-            this.graphPic.Name = "graphPic";
-            this.graphPic.Size = new System.Drawing.Size(484, 295);
-            this.graphPic.TabIndex = 7;
-            this.graphPic.TabStop = false;
-            this.graphPic.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.highScoreLabel.AutoSize = true;
+            this.highScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highScoreLabel.Location = new System.Drawing.Point(139, 475);
+            this.highScoreLabel.Name = "highScoreLabel";
+            this.highScoreLabel.Size = new System.Drawing.Size(156, 26);
+            this.highScoreLabel.TabIndex = 9;
+            this.highScoreLabel.Text = "High Score: 92";
             // 
             // averageTestLabel
             // 
@@ -83,15 +83,15 @@
             this.averageTestLabel.TabIndex = 8;
             this.averageTestLabel.Text = "Average Test Score: 72";
             // 
-            // highScoreLabel
+            // graphPic
             // 
-            this.highScoreLabel.AutoSize = true;
-            this.highScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.highScoreLabel.Location = new System.Drawing.Point(139, 475);
-            this.highScoreLabel.Name = "highScoreLabel";
-            this.highScoreLabel.Size = new System.Drawing.Size(156, 26);
-            this.highScoreLabel.TabIndex = 9;
-            this.highScoreLabel.Text = "High Score: 92";
+            this.graphPic.Image = ((System.Drawing.Image)(resources.GetObject("graphPic.Image")));
+            this.graphPic.Location = new System.Drawing.Point(205, 66);
+            this.graphPic.Name = "graphPic";
+            this.graphPic.Size = new System.Drawing.Size(484, 295);
+            this.graphPic.TabIndex = 7;
+            this.graphPic.TabStop = false;
+            this.graphPic.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // tabControl1
             // 
@@ -106,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(964, 680);
             this.Controls.Add(this.tabControl1);

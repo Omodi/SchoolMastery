@@ -51,7 +51,7 @@ namespace WindowsFormsApplication1
             // Question
             // 
             this.Question.AcceptsReturn = true;
-            this.Question.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Question.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Question.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Question.Location = new System.Drawing.Point(20, 12);
             this.Question.Multiline = true;
@@ -63,7 +63,7 @@ namespace WindowsFormsApplication1
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.nameLabel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel.Location = new System.Drawing.Point(189, 94);
             this.nameLabel.Name = "nameLabel";
@@ -75,7 +75,7 @@ namespace WindowsFormsApplication1
             // gradeLabel
             // 
             this.gradeLabel.AutoSize = true;
-            this.gradeLabel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.gradeLabel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.gradeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gradeLabel.Location = new System.Drawing.Point(189, 133);
             this.gradeLabel.Name = "gradeLabel";
@@ -119,7 +119,7 @@ namespace WindowsFormsApplication1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(964, 680);
             this.Controls.Add(this.loadTestButton);

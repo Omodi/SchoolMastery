@@ -91,7 +91,6 @@
             this.puppySelected.Size = new System.Drawing.Size(200, 200);
             this.puppySelected.TabIndex = 12;
             this.puppySelected.TabStop = false;
-            this.puppySelected.Hide();
             // 
             // samLabel
             // 
@@ -128,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(964, 680);
             this.Controls.Add(this.newProfileLabel);

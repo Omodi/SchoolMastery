@@ -81,5 +81,10 @@ namespace WindowsFormsApplication1
         {
             startbutton.Enabled = true;
         }
+
+        private void QuestionTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

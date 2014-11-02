@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreateProfile));
             this.createButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kittyPic = new System.Windows.Forms.PictureBox();
             this.puppyPic = new System.Windows.Forms.PictureBox();
             this.cowPic = new System.Windows.Forms.PictureBox();
@@ -40,8 +39,6 @@
             this.animalLabel = new System.Windows.Forms.Label();
             this.gradeDropDown = new System.Windows.Forms.ComboBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.blueBackground = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kittyPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.puppyPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cowPic)).BeginInit();
@@ -66,14 +63,6 @@
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(-23, -46);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // kittyPic
             // 
@@ -108,7 +97,7 @@
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.nameLabel.BackColor = System.Drawing.SystemColors.Window;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel.Location = new System.Drawing.Point(238, 111);
             this.nameLabel.Name = "nameLabel";
@@ -120,7 +109,7 @@
             // gradeLabel
             // 
             this.gradeLabel.AutoSize = true;
-            this.gradeLabel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.gradeLabel.BackColor = System.Drawing.SystemColors.Window;
             this.gradeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gradeLabel.Location = new System.Drawing.Point(238, 155);
             this.gradeLabel.Name = "gradeLabel";
@@ -132,7 +121,7 @@
             // animalLabel
             // 
             this.animalLabel.AutoSize = true;
-            this.animalLabel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.animalLabel.BackColor = System.Drawing.SystemColors.Window;
             this.animalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.animalLabel.Location = new System.Drawing.Point(238, 229);
             this.animalLabel.Name = "animalLabel";
@@ -170,23 +159,11 @@
             this.nameTextBox.Size = new System.Drawing.Size(121, 20);
             this.nameTextBox.TabIndex = 14;
             // 
-            // blueBackground
-            // 
-            this.blueBackground.AcceptsReturn = true;
-            this.blueBackground.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.blueBackground.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blueBackground.Location = new System.Drawing.Point(12, 12);
-            this.blueBackground.Multiline = true;
-            this.blueBackground.Name = "blueBackground";
-            this.blueBackground.ReadOnly = true;
-            this.blueBackground.Size = new System.Drawing.Size(925, 588);
-            this.blueBackground.TabIndex = 15;
-            // 
             // FormCreateProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(964, 680);
             this.Controls.Add(this.nameTextBox);
@@ -197,13 +174,10 @@
             this.Controls.Add(this.cowPic);
             this.Controls.Add(this.puppyPic);
             this.Controls.Add(this.kittyPic);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.createButton);
-            this.Controls.Add(this.blueBackground);
             this.Name = "FormCreateProfile";
             this.Text = "Create Profile";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kittyPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.puppyPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cowPic)).EndInit();
@@ -216,7 +190,6 @@
 
         private System.Windows.Forms.Button createButton;
         private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox kittyPic;
         private System.Windows.Forms.PictureBox puppyPic;
         private System.Windows.Forms.PictureBox cowPic;
@@ -225,7 +198,6 @@
         private System.Windows.Forms.Label animalLabel;
         private System.Windows.Forms.ComboBox gradeDropDown;
         private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.TextBox blueBackground;
     }
 }
 
