@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SchoolMastery.Model;
 
-namespace WindowsFormsApplication1
+namespace SchoolMastery.Views
 {
-    public partial class FormNewTest : Form
+    public partial class FormNewTest : UserControl
     {
         private Profile profile;
-        public FormNewTest(Profile profile)
+        private BaseWindow bas;
+        public FormNewTest(Profile profile, BaseWindow baseWindow)
         {
+            this.bas = baseWindow;
             this.profile = profile;
             InitializeComponent();
             startbutton.Enabled = false;
@@ -53,9 +55,9 @@ namespace WindowsFormsApplication1
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            FormMainMenu newForm = new FormMainMenu(this.profile);
+            FormMainMenu newForm = new FormMainMenu(this.profile, this.bas);
             this.Hide();
-            newForm.ShowDialog();
+            bas.changeUserControl(newForm, "SchoolMastery - Main Menu");
 
         }
 
@@ -72,8 +74,8 @@ namespace WindowsFormsApplication1
                     }
                 }
                 this.Hide();
-                FormQuestion newForm = new FormQuestion(this.profile,selectedTest);
-                newForm.ShowDialog();
+                FormQuestion newForm = new FormQuestion(this.profile,selectedTest, this.bas);
+                bas.changeUserControl(newForm, "SchoolMastery - Test");
             }
         }
 

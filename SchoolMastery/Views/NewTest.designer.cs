@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace SchoolMastery.Views
 {
     partial class FormNewTest
     {
@@ -39,7 +39,7 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(787, 617);
+            this.cancelButton.Location = new System.Drawing.Point(12, 617);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(150, 51);
             this.cancelButton.TabIndex = 5;
@@ -49,7 +49,7 @@
             // 
             // startbutton
             // 
-            this.startbutton.Location = new System.Drawing.Point(20, 617);
+            this.startbutton.Location = new System.Drawing.Point(802, 617);
             this.startbutton.Name = "startbutton";
             this.startbutton.Size = new System.Drawing.Size(150, 51);
             this.startbutton.TabIndex = 10;

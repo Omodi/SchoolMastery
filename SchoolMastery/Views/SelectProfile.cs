@@ -10,14 +10,15 @@ using System.Windows.Forms;
 using SchoolMastery.Model;
 using System.IO;
 
-namespace WindowsFormsApplication1
+namespace SchoolMastery.Views
 {
-    public partial class FormSelectProfile : Form
+    public partial class FormSelectProfile : UserControl
     {
         private Profile selectedProfile;
-
-        public FormSelectProfile()
+        private BaseWindow bas;
+        public FormSelectProfile(BaseWindow baseWindow)
         {
+            bas = baseWindow;
             InitializeComponent();
             PictureBox testImage = new PictureBox();
             testImage.Image = plusPic.Image;
@@ -83,26 +84,25 @@ namespace WindowsFormsApplication1
         }
         private void exitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            bas.Close();
         }
 
         private void plusPic_Click(object sender, EventArgs e)
         {
-            FormCreateProfile a = new FormCreateProfile();
+            FormCreateProfile a = new FormCreateProfile(bas);
             this.Hide();
-            a.Show();
+            bas.changeUserControl(a, "SchoolMastery - Create Profile");
         }
 
         private void createNewProfileTextBox_TextChanged(object sender, EventArgs e)
         {
-            FormCreateProfile a = new FormCreateProfile();
+            FormCreateProfile a = new FormCreateProfile(bas);
             this.Hide();
-            a.ShowDialog();
+            bas.changeUserControl(a, "SchoolMastery - Create Profile");
         }
 
         private void puppyPic_Click(object sender, EventArgs e)
         {
-            this.selectButton.Enabled = true;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSelectProfile));
             this.selectedProfile = new Profile(this.puppyPic, "Sam", "Grade 3");
             this.puppySelected.Show();
@@ -110,14 +110,21 @@ namespace WindowsFormsApplication1
 
         private void selectButton_Click(object sender, EventArgs e)
         {
-            Form mainMenu = new FormMainMenu(this.selectedProfile);
+            FormMainMenu newForm = new FormMainMenu(this.selectedProfile, this.bas);
             this.Hide();
-            mainMenu.ShowDialog();
+            bas.changeUserControl(newForm, "SchoolMastery - Main Menu");
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void puppySelected_Click(object sender, EventArgs e)
+        {
+            FormMainMenu newForm = new FormMainMenu(this.selectedProfile, this.bas);
+            this.Hide();
+            bas.changeUserControl(newForm, "SchoolMastery - Main Menu");
         }
     }
 }

@@ -49,7 +49,7 @@ namespace SchoolMastery.Views
             // 
             // createButton
             // 
-            this.createButton.Location = new System.Drawing.Point(12, 617);
+            this.createButton.Location = new System.Drawing.Point(802, 617);
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(150, 51);
             this.createButton.TabIndex = 3;
@@ -59,7 +59,7 @@ namespace SchoolMastery.Views
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(787, 617);
+            this.cancelButton.Location = new System.Drawing.Point(12, 617);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(150, 51);
             this.cancelButton.TabIndex = 5;
@@ -203,8 +203,8 @@ namespace SchoolMastery.Views
             // 
             // FormCreateProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            //this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(964, 680);

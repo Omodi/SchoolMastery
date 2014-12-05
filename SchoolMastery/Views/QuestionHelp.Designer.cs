@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace SchoolMastery.Views
 {
     partial class FormQuestionHelp
     {
@@ -47,12 +47,12 @@
             this.QuestionTextBox.AcceptsReturn = true;
             this.QuestionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.QuestionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuestionTextBox.Location = new System.Drawing.Point(12, 164);
+            this.QuestionTextBox.Location = new System.Drawing.Point(12, 23);
             this.QuestionTextBox.Multiline = true;
             this.QuestionTextBox.Name = "QuestionTextBox";
             this.QuestionTextBox.ReadOnly = true;
             this.QuestionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.QuestionTextBox.Size = new System.Drawing.Size(925, 167);
+            this.QuestionTextBox.Size = new System.Drawing.Size(470, 450);
             this.QuestionTextBox.TabIndex = 0;
             this.QuestionTextBox.Text = "Q: Insert sample question here... ?";
             // 
@@ -77,9 +77,9 @@
             this.panel1.Controls.Add(this.radioButton3);
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Location = new System.Drawing.Point(12, 487);
+            this.panel1.Location = new System.Drawing.Point(12, 479);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(925, 124);
+            this.panel1.Size = new System.Drawing.Size(470, 132);
             this.panel1.TabIndex = 2;
             // 
             // textBox1
@@ -133,17 +133,17 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 617);
+            this.button1.Location = new System.Drawing.Point(802, 617);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 51);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Submit";
+            this.button1.Text = "CheckAnswer";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(787, 617);
+            this.button3.Location = new System.Drawing.Point(12, 617);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(150, 51);
             this.button3.TabIndex = 5;
@@ -156,12 +156,12 @@
             this.Tips.AcceptsReturn = true;
             this.Tips.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Tips.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tips.Location = new System.Drawing.Point(12, 23);
+            this.Tips.Location = new System.Drawing.Point(488, 479);
             this.Tips.Multiline = true;
             this.Tips.Name = "Tips";
             this.Tips.ReadOnly = true;
             this.Tips.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Tips.Size = new System.Drawing.Size(925, 135);
+            this.Tips.Size = new System.Drawing.Size(449, 132);
             this.Tips.TabIndex = 6;
             this.Tips.Text = "Tips: Have some good problem solving solution ideas to put in here...";
             // 
@@ -170,12 +170,12 @@
             this.Steps.AcceptsReturn = true;
             this.Steps.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Steps.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Steps.Location = new System.Drawing.Point(12, 337);
+            this.Steps.Location = new System.Drawing.Point(488, 23);
             this.Steps.Multiline = true;
             this.Steps.Name = "Steps";
             this.Steps.ReadOnly = true;
             this.Steps.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Steps.Size = new System.Drawing.Size(925, 144);
+            this.Steps.Size = new System.Drawing.Size(449, 450);
             this.Steps.TabIndex = 7;
             this.Steps.Text = "Steps: Insert some steps to take in solving the problem to put in here...";
             // 
@@ -186,12 +186,12 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(964, 680);
-            this.Controls.Add(this.Steps);
             this.Controls.Add(this.Tips);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.QuestionTextBox);
+            this.Controls.Add(this.Steps);
             this.Name = "FormQuestionHelp";
             this.Text = "Help";
             this.panel1.ResumeLayout(false);

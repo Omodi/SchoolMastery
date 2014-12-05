@@ -9,14 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SchoolMastery.Model;
 
-namespace WindowsFormsApplication1
+namespace SchoolMastery.Views
 {
-    public partial class FormMainMenu : Form
+    public partial class FormMainMenu : UserControl
     {
         public Profile profile;
-        public FormMainMenu(Profile profile)
+        private BaseWindow bas;
+        public FormMainMenu(Profile profile, BaseWindow baseWindow)
         {
             this.profile = profile;
+            this.bas = baseWindow;
             InitializeComponent(profile);
             nameLabel.Text = profile.getName();
             gradeLabel.Text = "Grade " + profile.getGradeLevel().ToString();
@@ -37,27 +39,27 @@ namespace WindowsFormsApplication1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FormQuestion newForm = new FormQuestion(this.profile, this.profile.currentTest);
+            FormQuestion newForm = new FormQuestion(this.profile, this.profile.currentTest, this.bas);
             this.Hide();
-            newForm.ShowDialog();
+            bas.changeUserControl(newForm, "SchoolMastery - Test");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             if (this.profile.currentTest == null)
             {
-                FormNewTest a = new FormNewTest(profile);
+                FormNewTest a = new FormNewTest(profile, bas);
                 this.Hide();
-                a.ShowDialog();
+                bas.changeUserControl(a, "SchoolMastery - Create Test");
             }
             else
             {
                 var result = MessageBox.Show("Do you want to overwrite current test?", "Overwrite" ,  MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
-                    FormNewTest a = new FormNewTest(profile);
+                    FormNewTest a = new FormNewTest(profile, bas);
                     this.Hide();
-                    a.ShowDialog();
+                    bas.changeUserControl(a, "SchoolMastery - Create Test");
                 }
             }
             
@@ -65,7 +67,7 @@ namespace WindowsFormsApplication1
 
         private void returnButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            bas.Close();
         }
 
         private void loadTestButton_Click(object sender, EventArgs e)
@@ -75,9 +77,9 @@ namespace WindowsFormsApplication1
 
         private void statisticsButton_Click(object sender, EventArgs e)
         {
-            FormStatistics a = new FormStatistics(this.profile);
+            FormStatistics a = new FormStatistics(this.profile, bas);
             this.Hide();
-            a.ShowDialog();
+            bas.changeUserControl(a, "SchoolMastery - Score");
         }
 
         private void nameLabel_Click(object sender, EventArgs e)

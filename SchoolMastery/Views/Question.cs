@@ -9,15 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SchoolMastery.Model;
 
-namespace WindowsFormsApplication1
+namespace SchoolMastery.Views
 {
-    public partial class FormQuestion : Form
+    public partial class FormQuestion : UserControl
     {
         private Question question;
         private Test test;
         private Profile profile;
-        public FormQuestion(Profile profile, Test test)
+        private BaseWindow bas;
+        public FormQuestion(Profile profile, Test test, BaseWindow baseWindow)
         {
+            this.bas = baseWindow;
             this.test = test;
             this.profile = profile;
             InitializeComponent();
@@ -60,15 +62,15 @@ namespace WindowsFormsApplication1
                 if (this.test.problemIndex >= this.test.getQuestions().Count)
                 {
                     this.test.finished = true;
-                    FormTestFinished newForm = new FormTestFinished( this.profile, this.test);
+                    FormTestFinished newForm = new FormTestFinished( this.profile, this.test, this.bas);
                     this.Hide();
-                    newForm.ShowDialog();
+                    bas.changeUserControl(newForm, "SchoolMastery - Results");
                 }
                 else
                 {
-                    FormQuestion newForm = new FormQuestion(this.profile, this.test);
+                    FormQuestion newForm = new FormQuestion(this.profile, this.test, this.bas);
                     this.Hide();
-                    newForm.ShowDialog();
+                    bas.changeUserControl(newForm, "SchoolMastery - Test");
                 }
             }
             else
@@ -80,31 +82,31 @@ namespace WindowsFormsApplication1
                 if (this.test.problemIndex >= this.test.getQuestions().Count)
                 {
                     this.test.finished = true;
-                    FormTestFinished newForm = new FormTestFinished(this.profile, this.test);
+                    FormTestFinished newForm = new FormTestFinished(this.profile, this.test, this.bas);
                     this.Hide();
-                    newForm.ShowDialog();
+                    bas.changeUserControl(newForm, "SchoolMastery - Results");
                 }
                 else
                 {
-                    FormQuestion newForm = new FormQuestion(this.profile, this.test);
+                    FormQuestion newForm = new FormQuestion(this.profile, this.test, this.bas);
                     this.Hide();
-                    newForm.ShowDialog();
+                    bas.changeUserControl(newForm, "SchoolMastery - Test");
                 }
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FormMainMenu newForm = new FormMainMenu(this.profile);
+            FormMainMenu newForm = new FormMainMenu(this.profile, this.bas);
             this.Hide();
-            newForm.ShowDialog();
+            bas.changeUserControl(newForm, "SchoolMastery - Main Menu");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FormQuestionHelp newForm = new FormQuestionHelp(this.profile, this.test, this.question);
+            FormQuestionHelp newForm = new FormQuestionHelp(this.profile, this.test, this.question, this.bas);
             this.Hide();
-            newForm.ShowDialog();
+            bas.changeUserControl(newForm, "SchoolMastery - Help Question");
         }
     }
 }

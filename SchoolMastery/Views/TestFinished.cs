@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SchoolMastery.Model;
 
-namespace WindowsFormsApplication1
+namespace SchoolMastery.Views
 {
-    public partial class FormTestFinished : Form
+    public partial class FormTestFinished : UserControl
     {
         private Profile profile;
-        public FormTestFinished(Profile profile, Test test)
+        private BaseWindow bas;
+        public FormTestFinished(Profile profile, Test test, BaseWindow baseWindow)
         {
+            this.bas = baseWindow;
             this.profile = profile;
             profile.currentTest = null;
             InitializeComponent();
@@ -32,9 +34,9 @@ namespace WindowsFormsApplication1
 
         private void returnButton_Click(object sender, EventArgs e)
         {
-            FormMainMenu newForm = new FormMainMenu(this.profile);
+            FormMainMenu newForm = new FormMainMenu(this.profile, this.bas);
             this.Hide();
-            newForm.ShowDialog();
+            bas.changeUserControl(newForm, "SchoolMastery - Main Menu");
         }
     }
 }

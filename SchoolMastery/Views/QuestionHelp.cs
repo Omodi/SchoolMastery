@@ -9,15 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SchoolMastery.Model;
 
-namespace WindowsFormsApplication1
+namespace SchoolMastery.Views
 {
-    public partial class FormQuestionHelp : Form
+    public partial class FormQuestionHelp : UserControl
     {
         private Test test;
         private Profile profile;
         private HelpQuestion help;
-        public FormQuestionHelp(Profile profile, Test test, Question question)
+        private BaseWindow bas;
+        public FormQuestionHelp(Profile profile, Test test, Question question, BaseWindow baseWindow)
         {
+            this.bas = baseWindow;
             this.test = test;
             this.profile = profile;
             this.help = question.getHelpQuestion();
@@ -33,9 +35,9 @@ namespace WindowsFormsApplication1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FormQuestion newForm = new FormQuestion(this.profile, this.test);
+            FormQuestion newForm = new FormQuestion(this.profile, this.test, this.bas);
             this.Hide();
-            newForm.ShowDialog();
+            bas.changeUserControl(newForm, "SchoolMastery - Test");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -60,16 +62,16 @@ namespace WindowsFormsApplication1
             if (checkedButton.ToString() == this.help.getCorrectAnswer())
             {
                 var result = MessageBox.Show("You were correct!");
-                FormQuestion newForm = new FormQuestion(this.profile, this.test);
+                FormQuestion newForm = new FormQuestion(this.profile, this.test, this.bas);
                 this.Hide();
-                newForm.ShowDialog();
+                bas.changeUserControl(newForm, "SchoolMastery - Test");
             }
             else
             {
                 var result = MessageBox.Show("You were incorrect!\nThe correct answer was " + help.getAnswers()[Convert.ToInt32(help.getCorrectAnswer()) - 1]);
-                FormQuestion newForm = new FormQuestion(this.profile, this.test);
+                FormQuestion newForm = new FormQuestion(this.profile, this.test, this.bas);
                 this.Hide();
-                newForm.ShowDialog();
+                bas.changeUserControl(newForm, "SchoolMastery - Test");
             }
         }
     }

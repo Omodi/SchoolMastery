@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SchoolMastery.Model;
-using WindowsFormsApplication1;
+using SchoolMastery.Views;
 
 namespace SchoolMastery
 {
@@ -18,17 +18,7 @@ namespace SchoolMastery
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormNewTest(new Profile(null,"Steven", "2222222")));
-            /*List<Test> tests = TestBuilder.createTests();
-            foreach (Test test in tests)
-            {
-                foreach(Question question in test.getQuestions()){
-                    Console.WriteLine(question.getQuestion());
-                    foreach(string answer in question.getAnswers()){
-                        Console.WriteLine(answer);
-                    }
-                }
-            }*/
+            Application.Run(new BaseWindow());
         }
     }
 }

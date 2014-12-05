@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace SchoolMastery.Views
 {
     partial class FormStatistics
     {
@@ -31,10 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStatistics));
             this.returnButton = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.highScoreLabel = new System.Windows.Forms.Label();
             this.averageTestLabel = new System.Windows.Forms.Label();
             this.graphPic = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.historyTab = new System.Windows.Forms.TabPage();
+            this.OverallTab = new System.Windows.Forms.TabPage();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.graphPic)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -42,7 +45,7 @@
             // 
             // returnButton
             // 
-            this.returnButton.Location = new System.Drawing.Point(787, 617);
+            this.returnButton.Location = new System.Drawing.Point(12, 617);
             this.returnButton.Name = "returnButton";
             this.returnButton.Size = new System.Drawing.Size(150, 51);
             this.returnButton.TabIndex = 5;
@@ -53,6 +56,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.highScoreLabel);
             this.tabPage1.Controls.Add(this.averageTestLabel);
             this.tabPage1.Controls.Add(this.graphPic);
@@ -63,11 +67,21 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Math";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(139, 489);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(230, 26);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Further study: Addition";
+            // 
             // highScoreLabel
             // 
             this.highScoreLabel.AutoSize = true;
             this.highScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.highScoreLabel.Location = new System.Drawing.Point(139, 475);
+            this.highScoreLabel.Location = new System.Drawing.Point(139, 446);
             this.highScoreLabel.Name = "highScoreLabel";
             this.highScoreLabel.Size = new System.Drawing.Size(156, 26);
             this.highScoreLabel.TabIndex = 9;
@@ -77,7 +91,7 @@
             // 
             this.averageTestLabel.AutoSize = true;
             this.averageTestLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.averageTestLabel.Location = new System.Drawing.Point(139, 419);
+            this.averageTestLabel.Location = new System.Drawing.Point(139, 403);
             this.averageTestLabel.Name = "averageTestLabel";
             this.averageTestLabel.Size = new System.Drawing.Size(239, 26);
             this.averageTestLabel.TabIndex = 8;
@@ -96,11 +110,31 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.historyTab);
+            this.tabControl1.Controls.Add(this.OverallTab);
             this.tabControl1.Location = new System.Drawing.Point(12, 10);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(925, 601);
             this.tabControl1.TabIndex = 17;
+            // 
+            // historyTab
+            // 
+            this.historyTab.Location = new System.Drawing.Point(4, 22);
+            this.historyTab.Name = "historyTab";
+            this.historyTab.Size = new System.Drawing.Size(917, 575);
+            this.historyTab.TabIndex = 1;
+            this.historyTab.Text = "History";
+            this.historyTab.UseVisualStyleBackColor = true;
+            // 
+            // OverallTab
+            // 
+            this.OverallTab.Location = new System.Drawing.Point(4, 22);
+            this.OverallTab.Name = "OverallTab";
+            this.OverallTab.Size = new System.Drawing.Size(917, 575);
+            this.OverallTab.TabIndex = 2;
+            this.OverallTab.Text = "Overall";
+            this.OverallTab.UseVisualStyleBackColor = true;
             // 
             // FormStatistics
             // 
@@ -108,11 +142,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(964, 680);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.returnButton);
             this.Name = "FormStatistics";
-            this.Text = "Statistics";
+            this.Size = new System.Drawing.Size(964, 680);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.graphPic)).EndInit();
@@ -129,6 +162,9 @@
         private System.Windows.Forms.Label averageTestLabel;
         private System.Windows.Forms.PictureBox graphPic;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabPage historyTab;
+        private System.Windows.Forms.TabPage OverallTab;
     }
 }
 

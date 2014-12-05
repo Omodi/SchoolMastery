@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace SchoolMastery.Views
 {
     partial class FormSelectProfile
     {
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSelectProfile));
-            this.selectButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.puppyPic = new System.Windows.Forms.PictureBox();
             this.plusPic = new System.Windows.Forms.PictureBox();
@@ -42,20 +41,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.puppySelected)).BeginInit();
             this.SuspendLayout();
             // 
-            // selectButton
-            // 
-            this.selectButton.Enabled = false;
-            this.selectButton.Location = new System.Drawing.Point(12, 617);
-            this.selectButton.Name = "selectButton";
-            this.selectButton.Size = new System.Drawing.Size(150, 51);
-            this.selectButton.TabIndex = 3;
-            this.selectButton.Text = "Select";
-            this.selectButton.UseVisualStyleBackColor = true;
-            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
-            // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(787, 617);
+            this.exitButton.Location = new System.Drawing.Point(12, 617);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(150, 51);
             this.exitButton.TabIndex = 5;
@@ -91,6 +79,7 @@
             this.puppySelected.Size = new System.Drawing.Size(200, 200);
             this.puppySelected.TabIndex = 12;
             this.puppySelected.TabStop = false;
+            this.puppySelected.Click += new System.EventHandler(this.puppySelected_Click);
             // 
             // samLabel
             // 
@@ -137,7 +126,6 @@
             this.Controls.Add(this.plusPic);
             this.Controls.Add(this.puppyPic);
             this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.selectButton);
             this.Name = "FormSelectProfile";
             this.Text = "Select Profile";
             ((System.ComponentModel.ISupportInitialize)(this.puppyPic)).EndInit();
@@ -150,7 +138,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button selectButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.PictureBox puppyPic;
         private System.Windows.Forms.PictureBox plusPic;

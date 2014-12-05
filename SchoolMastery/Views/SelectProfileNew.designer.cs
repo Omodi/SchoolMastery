@@ -1,5 +1,5 @@
 ﻿using SchoolMastery.Model;
-namespace WindowsFormsApplication1
+namespace SchoolMastery.Views
 {
     partial class FormSelectProfileNew
     {
@@ -30,7 +30,6 @@ namespace WindowsFormsApplication1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSelectProfileNew));
-            this.selectButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.puppyPic = new System.Windows.Forms.PictureBox();
             this.plusPic = new System.Windows.Forms.PictureBox();
@@ -46,19 +45,9 @@ namespace WindowsFormsApplication1
             ((System.ComponentModel.ISupportInitialize)(this.customPicture)).BeginInit();
             this.SuspendLayout();
             // 
-            // selectButton
-            // 
-            this.selectButton.Location = new System.Drawing.Point(12, 617);
-            this.selectButton.Name = "selectButton";
-            this.selectButton.Size = new System.Drawing.Size(150, 51);
-            this.selectButton.TabIndex = 3;
-            this.selectButton.Text = "Select";
-            this.selectButton.UseVisualStyleBackColor = true;
-            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
-            // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(787, 617);
+            this.exitButton.Location = new System.Drawing.Point(12, 617);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(150, 51);
             this.exitButton.TabIndex = 5;
@@ -123,9 +112,8 @@ namespace WindowsFormsApplication1
             this.customProfileGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customProfileGrade.Location = new System.Drawing.Point(479, 424);
             this.customProfileGrade.Name = "customProfileGrade";
-            this.customProfileGrade.Size = new System.Drawing.Size(67, 20);
+            this.customProfileGrade.Size = new System.Drawing.Size(0, 20);
             this.customProfileGrade.TabIndex = 17;
-            this.customProfileGrade.Text = "Grade: " + this.newProfile.getGradeLevel();
             // 
             // customProfileName
             // 
@@ -134,13 +122,11 @@ namespace WindowsFormsApplication1
             this.customProfileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customProfileName.Location = new System.Drawing.Point(490, 404);
             this.customProfileName.Name = "customProfileName";
-            this.customProfileName.Size = new System.Drawing.Size(40, 20);
+            this.customProfileName.Size = new System.Drawing.Size(0, 20);
             this.customProfileName.TabIndex = 16;
-            this.customProfileName.Text = this.newProfile.getName();
             // 
             // customPicture
             // 
-            this.customPicture.Image = (System.Drawing.Image)this.newProfile.getPicture().Image;
             this.customPicture.Location = new System.Drawing.Point(406, 201);
             this.customPicture.Name = "customPicture";
             this.customPicture.Size = new System.Drawing.Size(200, 200);
@@ -166,7 +152,6 @@ namespace WindowsFormsApplication1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(964, 680);
             this.Controls.Add(this.customProfileGrade);
             this.Controls.Add(this.newProfileLabel);
             this.Controls.Add(this.label1);
@@ -174,12 +159,12 @@ namespace WindowsFormsApplication1
             this.Controls.Add(this.plusPic);
             this.Controls.Add(this.puppyPic);
             this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.selectButton);
             this.Controls.Add(this.customPicture);
-            this.Controls.Add(this.selectionIndicator);
             this.Controls.Add(this.customProfileName);
+            this.Controls.Add(this.selectionIndicator);
             this.Name = "FormSelectProfileNew";
-            this.Text = "Select Profile";
+            this.Size = new System.Drawing.Size(964, 680);
+            this.Load += new System.EventHandler(this.FormSelectProfileNew_Load);
             ((System.ComponentModel.ISupportInitialize)(this.puppyPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plusPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customPicture)).EndInit();
@@ -190,7 +175,6 @@ namespace WindowsFormsApplication1
 
         #endregion
 
-        private System.Windows.Forms.Button selectButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.PictureBox puppyPic;
         private System.Windows.Forms.PictureBox plusPic;

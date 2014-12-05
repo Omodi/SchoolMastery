@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SchoolMastery.Properties
-{
-
-
+namespace SchoolMastery.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,49 +22,119 @@ namespace SchoolMastery.Properties
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SchoolMastery.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Addition
+        ///Math
+        ///0
+        ///q=2+2=?
+        ///a1=1
+        ///a2=2
+        ///a3=3
+        ///a4=4
+        ///c=4
+        ///qh=3+5=?
+        ///t= You can start at five and count 3 times
+        ///s= 5 + 1 = 6, 5 + 2 = 7, 5 + 3 = ?
+        ///a1=8
+        ///a2=12
+        ///a3=5
+        ///a4=3
+        ///c=1
+        ///q=4+5=?
+        ///a1=7
+        ///a2=9
+        ///a3=12
+        ///a4=10
+        ///c=2
+        ///qh=3+5=?
+        ///t= You can start at five and count 3 times
+        ///s= 5 + 1 = 6, 5 + 2 = 7, 5 + 3 = ?
+        ///a1=8
+        ///a2=12
+        ///a3=5
+        ///a4=3
+        ///c=1.
+        /// </summary>
+        internal static string KMathOne {
+            get {
+                return ResourceManager.GetString("KMathOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Multiplication
+        ///Math
+        ///0
+        ///q=2*2=?
+        ///a1=1
+        ///a2=2
+        ///a3=3
+        ///a4=4
+        ///c=4
+        ///qh=3*5=?
+        ///t= You can add 3 together five times
+        ///s= 3 + 3 + 3 + 3 + 3 = ?
+        ///a1=8
+        ///a2=15
+        ///a3=18
+        ///a4=12
+        ///c=1
+        ///q=4*5=?
+        ///a1=7
+        ///a2=20
+        ///a3=12
+        ///a4=10
+        ///c=2
+        ///qh=3*5=?
+        ///t= You can add 3 together five times
+        ///s= 3 + 3 + 3 + 3 + 3 = ?
+        ///a1=8
+        ///a2=15
+        ///a3=18
+        ///a4=12
+        ///c=1.
+        /// </summary>
+        internal static string KMathTwo {
+            get {
+                return ResourceManager.GetString("KMathTwo", resourceCulture);
             }
         }
     }

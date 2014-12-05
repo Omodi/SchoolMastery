@@ -1,5 +1,5 @@
 ﻿using SchoolMastery.Model;
-namespace WindowsFormsApplication1
+namespace SchoolMastery.Views
 {
     partial class FormMainMenu
     {
@@ -40,7 +40,7 @@ namespace WindowsFormsApplication1
             // 
             // returnButton
             // 
-            this.returnButton.Location = new System.Drawing.Point(787, 617);
+            this.returnButton.Location = new System.Drawing.Point(12, 617);
             this.returnButton.Name = "returnButton";
             this.returnButton.Size = new System.Drawing.Size(150, 51);
             this.returnButton.TabIndex = 5;
@@ -89,7 +89,7 @@ namespace WindowsFormsApplication1
             this.statisticsButton.Name = "statisticsButton";
             this.statisticsButton.Size = new System.Drawing.Size(150, 51);
             this.statisticsButton.TabIndex = 9;
-            this.statisticsButton.Text = "Statistics";
+            this.statisticsButton.Text = "Score";
             this.statisticsButton.UseVisualStyleBackColor = true;
             this.statisticsButton.Click += new System.EventHandler(this.statisticsButton_Click);
             // 
