@@ -1,5 +1,5 @@
 ﻿using System;
-namespace WindowsFormsApplication1
+namespace SchoolMastery.Views
 {
     partial class FormCreateProfile
     {

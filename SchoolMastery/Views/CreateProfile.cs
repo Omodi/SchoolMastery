@@ -9,14 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SchoolMastery.Model;
 
-namespace WindowsFormsApplication1
+namespace SchoolMastery.Views
 {
-    public partial class FormCreateProfile : Form
+    public partial class FormCreateProfile : UserControl
     {
         PictureBox currentPicture;
-        public FormCreateProfile()
+        BaseWindow bas;
+        public FormCreateProfile(BaseWindow baseWindow)
         {
             InitializeComponent();
+            bas = baseWindow;
             this.currentPicture = this.puppyPic;
         }
 
@@ -28,14 +30,10 @@ namespace WindowsFormsApplication1
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-                Profile profile = new Profile(currentPicture, nameTextBox.Text, gradeDropDown.SelectedItem.ToString());
-                FormSelectProfileNew a = new FormSelectProfileNew(profile);
-                this.Hide();
-                a.ShowDialog();
-            //}
-            //catch (NullReferenceException) { }
+            Profile profile = new Profile(currentPicture, nameTextBox.Text, gradeDropDown.SelectedItem.ToString());
+            FormSelectProfileNew a = new FormSelectProfileNew(profile, bas);
+            this.Hide();
+            bas.changeUserControl(a, "SchooMastery - Select Profile");
         }
 
         private void kittyPic_Click(object sender, EventArgs e)
@@ -52,10 +50,10 @@ namespace WindowsFormsApplication1
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            FormSelectProfile a = new FormSelectProfile();
+            FormSelectProfile a = new FormSelectProfile(bas);
             a.BackColor = System.Drawing.SystemColors.Window;
             this.Hide();
-            a.ShowDialog();
+            bas.changeUserControl(a, "SchooMastery - Select Profile");
         }
 
     }
