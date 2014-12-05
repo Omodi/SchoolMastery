@@ -1,0 +1,31 @@
+US History
+History
+0
+q=How many United States Armed Forces do we have?
+a2=2
+a3=3
+a4=4
+a5=5
+c=4
+qh=On what day do we celebrate Independence Day?
+t= Ask your parents
+s= You can look it up in any calendar
+a1=June 18
+a2=July 14
+a3=September 9
+a4=July 4
+c=4
+q=What is the flower of New York?
+a1=Dandelion
+a2=Daisy
+a3=Rose
+a4=Carnation
+c=2
+qh=On what day do we celebrate Independence Day?
+t= Ask your parents
+s= You can look it up in any calendar
+a1=June 18
+a2=July 14
+a3=September 9
+a4=July 4
+c=4

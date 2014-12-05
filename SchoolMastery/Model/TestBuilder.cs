@@ -132,6 +132,7 @@ namespace SchoolMastery.Model
             //foreach(string fileName in fileNames){
             tests.Add(createTest(Resources.KMathOne));
             tests.Add(createTest(Resources.KMathTwo));
+            tests.Add(createTest(Resources.KHistoryOne));
             //}
             return tests;
 

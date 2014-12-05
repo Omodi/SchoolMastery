@@ -222,6 +222,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Tests\KHistoryOne.txt" />
     <Content Include="Tests\KMathTwo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

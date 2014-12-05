@@ -185,7 +185,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(964, 680);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.button3);
@@ -194,7 +193,7 @@
             this.Controls.Add(this.QuestionTextBox);
             this.Controls.Add(this.panel1);
             this.Name = "FormQuestion";
-            this.Text = "Question";
+            this.Size = new System.Drawing.Size(964, 680);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

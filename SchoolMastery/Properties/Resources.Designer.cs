@@ -61,6 +61,54 @@ namespace SchoolMastery.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap graphPic_Image {
+            get {
+                object obj = ResourceManager.GetObject("graphPic.Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to US History
+        ///History
+        ///0
+        ///q=How many United States Armed Forces do we have?
+        ///a2=2
+        ///a3=3
+        ///a4=4
+        ///a5=5
+        ///c=4
+        ///qh=On what day do we celebrate Independence Day?
+        ///t= Ask your parents
+        ///s= You can look it up in any calendar
+        ///a1=June 18
+        ///a2=July 14
+        ///a3=September 9
+        ///a4=July 4
+        ///c=4
+        ///q=What is the flower of New York?
+        ///a1=Dandelion
+        ///a2=Daisy
+        ///a3=Rose
+        ///a4=Carnation
+        ///c=2
+        ///qh=On what day do we celebrate Independence Day?
+        ///t= Ask your parents
+        ///s= You can look it up in any calendar
+        ///a1=June 18
+        ///a2=July 14
+        ///a3=September 9
+        ///a4=Ju [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string KHistoryOne {
+            get {
+                return ResourceManager.GetString("KHistoryOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Addition
         ///Math
         ///0
@@ -116,7 +164,7 @@ namespace SchoolMastery.Properties {
         ///a2=15
         ///a3=18
         ///a4=12
-        ///c=1
+        ///c=2
         ///q=4*5=?
         ///a1=7
         ///a2=20
@@ -130,7 +178,7 @@ namespace SchoolMastery.Properties {
         ///a2=15
         ///a3=18
         ///a4=12
-        ///c=1.
+        ///c=2.
         /// </summary>
         internal static string KMathTwo {
             get {

@@ -138,6 +138,7 @@ namespace SchoolMastery.Views
             // 
             this.selectionIndicator.AcceptsReturn = true;
             this.selectionIndicator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.selectionIndicator.Enabled = false;
             this.selectionIndicator.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectionIndicator.Location = new System.Drawing.Point(396, 191);
             this.selectionIndicator.Multiline = true;

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStatistics));
             this.returnButton = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
@@ -99,10 +98,11 @@
             // 
             // graphPic
             // 
-            this.graphPic.Image = ((System.Drawing.Image)(resources.GetObject("graphPic.Image")));
+            this.graphPic.BackColor = System.Drawing.Color.White;
+            this.graphPic.Image = global::SchoolMastery.Properties.Resources.graphPic_Image;
             this.graphPic.Location = new System.Drawing.Point(205, 66);
             this.graphPic.Name = "graphPic";
-            this.graphPic.Size = new System.Drawing.Size(484, 295);
+            this.graphPic.Size = new System.Drawing.Size(484, 316);
             this.graphPic.TabIndex = 7;
             this.graphPic.TabStop = false;
             this.graphPic.Click += new System.EventHandler(this.pictureBox2_Click);

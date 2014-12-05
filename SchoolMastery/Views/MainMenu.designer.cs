@@ -27,7 +27,7 @@ namespace SchoolMastery.Views
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent(Profile profile)
+        private void InitializeComponent()
         {
             this.returnButton = new System.Windows.Forms.Button();
             this.Question = new System.Windows.Forms.TextBox();
@@ -36,6 +36,7 @@ namespace SchoolMastery.Views
             this.statisticsButton = new System.Windows.Forms.Button();
             this.startNewTestButton = new System.Windows.Forms.Button();
             this.loadTestButton = new System.Windows.Forms.Button();
+            this.selectProfileButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // returnButton
@@ -52,6 +53,7 @@ namespace SchoolMastery.Views
             // 
             this.Question.AcceptsReturn = true;
             this.Question.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Question.Enabled = false;
             this.Question.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Question.Location = new System.Drawing.Point(20, 12);
             this.Question.Multiline = true;
@@ -67,9 +69,8 @@ namespace SchoolMastery.Views
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel.Location = new System.Drawing.Point(189, 94);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(53, 25);
+            this.nameLabel.Size = new System.Drawing.Size(0, 25);
             this.nameLabel.TabIndex = 7;
-            this.nameLabel.Text = this.profile.getName();
             this.nameLabel.Click += new System.EventHandler(this.nameLabel_Click);
             // 
             // gradeLabel
@@ -79,9 +80,8 @@ namespace SchoolMastery.Views
             this.gradeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gradeLabel.Location = new System.Drawing.Point(189, 133);
             this.gradeLabel.Name = "gradeLabel";
-            this.gradeLabel.Size = new System.Drawing.Size(82, 25);
+            this.gradeLabel.Size = new System.Drawing.Size(0, 25);
             this.gradeLabel.TabIndex = 8;
-            this.gradeLabel.Text = "Grade: " + this.profile.getGradeLevel();
             // 
             // statisticsButton
             // 
@@ -115,13 +115,23 @@ namespace SchoolMastery.Views
             this.loadTestButton.UseVisualStyleBackColor = true;
             this.loadTestButton.Click += new System.EventHandler(this.button4_Click);
             // 
+            // selectProfileButton
+            // 
+            this.selectProfileButton.Location = new System.Drawing.Point(404, 617);
+            this.selectProfileButton.Name = "selectProfileButton";
+            this.selectProfileButton.Size = new System.Drawing.Size(150, 51);
+            this.selectProfileButton.TabIndex = 12;
+            this.selectProfileButton.Text = "Select Profile";
+            this.selectProfileButton.UseVisualStyleBackColor = true;
+            this.selectProfileButton.Click += new System.EventHandler(this.selectProfileButton_Click);
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(964, 680);
+            this.Controls.Add(this.selectProfileButton);
             this.Controls.Add(this.loadTestButton);
             this.Controls.Add(this.startNewTestButton);
             this.Controls.Add(this.statisticsButton);
@@ -130,7 +140,7 @@ namespace SchoolMastery.Views
             this.Controls.Add(this.Question);
             this.Controls.Add(this.returnButton);
             this.Name = "FormMainMenu";
-            this.Text = "Home";
+            this.Size = new System.Drawing.Size(964, 680);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,6 +155,7 @@ namespace SchoolMastery.Views
         private System.Windows.Forms.Button statisticsButton;
         private System.Windows.Forms.Button startNewTestButton;
         private System.Windows.Forms.Button loadTestButton;
+        private System.Windows.Forms.Button selectProfileButton;
     }
 }
 

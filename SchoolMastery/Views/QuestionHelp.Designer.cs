@@ -137,7 +137,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 51);
             this.button1.TabIndex = 3;
-            this.button1.Text = "CheckAnswer";
+            this.button1.Text = "Check Answer";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -185,7 +185,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(964, 680);
             this.Controls.Add(this.Tips);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -193,7 +192,7 @@
             this.Controls.Add(this.QuestionTextBox);
             this.Controls.Add(this.Steps);
             this.Name = "FormQuestionHelp";
-            this.Text = "Help";
+            this.Size = new System.Drawing.Size(964, 680);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
